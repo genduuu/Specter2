@@ -10,7 +10,7 @@ local window = library:CreateWindow({
     AutoShow = true,
     TabPadding = 8,
     MenuFadeTime = 0.2,
-    Size = UDim2.fromOffset(550, 440)
+    Size = UDim2.fromOffset(550, 445)
 })
  
 local tabs = {
@@ -548,30 +548,6 @@ game_group:AddButton({
 })
  
 game_group:AddButton({
-    Text = 'Tp to Bone',
- 
-    Func = function()
-        if bone then
-            bone_prompt = bone:FindFirstChildOfClass("ProximityPrompt")
-            last_pos = local_player.Character.HumanoidRootPart.CFrame
- 
-            if bone_prompt then
-                local_player.Character.HumanoidRootPart.CFrame = bone.CFrame + Vector3.new(-0.08, 5, 0)
-                camera.CFrame = CFrame.fromEulerAnglesXYZ(30, 88, 180)
-                task.wait(6)
-                fireproximityprompt(bone_prompt)
-                local_player.Character.HumanoidRootPart.CFrame = last_pos
-                library:Notify("Bone Collected")
-            end
-        else
-            library:Notify("Bone not found")
-        end
-    end,
-    DoubleClick = false,
-    Tooltip = 'Collects the bone'
-})
- 
-game_group:AddButton({
     Text = 'Enable Power',
  
     Func = function()
@@ -840,6 +816,30 @@ player_group:AddButton({
     end,
     DoubleClick = false,
     Tooltip = 'Teleports Motion Grids to the ghost to check for motion'
+})
+
+player_group:AddButton({
+    Text = 'Tp to Bone',
+ 
+    Func = function()
+        if bone then
+            bone_prompt = bone:FindFirstChildOfClass("ProximityPrompt")
+            last_pos = local_player.Character.HumanoidRootPart.CFrame
+ 
+            if bone_prompt then
+                local_player.Character.HumanoidRootPart.CFrame = bone.CFrame + Vector3.new(-0.08, 5, 0)
+                camera.CFrame = CFrame.fromEulerAnglesXYZ(30, 88, 180)
+                task.wait(6)
+                fireproximityprompt(bone_prompt)
+                local_player.Character.HumanoidRootPart.CFrame = last_pos
+                library:Notify("Bone Collected")
+            end
+        else
+            library:Notify("Bone not found")
+        end
+    end,
+    DoubleClick = false,
+    Tooltip = 'Collects the bone'
 })
  
 player_group:AddToggle('no_hold', {
