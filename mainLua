@@ -9,7 +9,8 @@ local window = library:CreateWindow({
     Center = true,
     AutoShow = true,
     TabPadding = 8,
-    MenuFadeTime = 0.2
+    MenuFadeTime = 0.2,
+    UDim2.fromOffset(550, 300)
 })
  
 local tabs = {
