@@ -11,7 +11,6 @@ local window = library:CreateWindow({
     TabPadding = 8,
     MenuFadeTime = 0.2,
     Size = UDim2.fromOffset(550, 440)
-    Position = UDim2.fromOffset(175, 20)
 })
  
 local tabs = {
