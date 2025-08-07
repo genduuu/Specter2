@@ -550,32 +550,15 @@ game_group:AddButton({
 })
  
 game_group:AddButton({
-    Text = 'Enable Power',
+    Text = 'End Round',
  
     Func = function()
-        for _, v in next, fuse_box:GetChildren() do
-            if v:IsA("ProximityPrompt") and v.name == "FuseboxPrompt" then
-                local last_pos = local_player.Character.HumanoidRootPart.CFrame
-                local_player.Character.HumanoidRootPart.CFrame = v.Parent.CFrame
-                task.wait(.2)
-                fireproximityprompt(v)
-                task.wait(.2)
-                local_player.Character.HumanoidRootPart.CFrame = last_pos
-                local fuse_box_toggles = Workspace.Map.Fusebox
-                if fuse_box_toggles then
-                    if fuse_box_toggles:FindFirstChild("On").Transparency == 0 then
-                        library:Notify("Turned off power box.")
-                    else
-                        if fuse_box_toggles:FindFirstChild("Off").Transparency == 0 then
-                            library:Notify("Turned on power box.")
-                        end
-                    end
-                end
-            end
-        end
+        local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+        task.wait(0.5)
+        fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
     end,
     DoubleClick = false,
-    Tooltip = 'Turns on/off the power box'
+    Tooltip = 'Tp to Van then End Round...'
 })
  
 game_group:AddToggle('anti_ghost_touch', {
