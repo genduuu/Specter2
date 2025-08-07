@@ -560,7 +560,7 @@ game_group:AddButton({
         fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
     end,
     DoubleClick = false,
-    Tooltip = 'Tp to Van then End Round...'
+    Tooltip = 'Works only on Cargo Map'
 })
  
 game_group:AddToggle('anti_ghost_touch', {
