@@ -4,7 +4,7 @@ local save_manager = loadstring(game:HttpGet('https://raw.githubusercontent.com/
  
 local window = library:CreateWindow({
     Title = 'Astolfo Ware | Edited by : @mumtazhafidz(Ig) | Made by @kylosilly',
-    Position = UDim2.fromOffset(160, 30),
+    Position = UDim2.fromOffset(150, 150),
     AutoShow = true,
     TabPadding = 8,
     MenuFadeTime = 0.2,
@@ -111,7 +111,7 @@ local ghost_room_label = game_group:AddLabel('Ghost Room: Not Found')
 local ghost_speed_label = game_group:AddLabel('Ghost Speed: Not Found')
 local sanity_label = player_group:AddLabel('Sanity:')
  
-task.delay(20, function()
+task.delay(17, function()
     fingerprints.ChildAdded:Connect(function(fingerprint)
         if fingerprint:IsA("Part") and not found_fingerprint then
             fingerprint_label:SetText('Fingerprints: Yes')
