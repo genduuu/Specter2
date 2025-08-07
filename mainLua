@@ -10,7 +10,8 @@ local window = library:CreateWindow({
     AutoShow = true,
     TabPadding = 8,
     MenuFadeTime = 0.2,
-    Size = UDim2.fromOffset(550, 445)
+    Size = UDim2.fromOffset(550, 440)
+    Position = UDim2.fromOffset(175, 20)
 })
  
 local tabs = {
@@ -107,6 +108,7 @@ local spirit_box_label = game_group:AddLabel('Spirit Box: Not Found')
  
 game_group:AddDivider()
 
+local last_emf_label = game_group:AddLabel('Last EMF: None')
 local ghost_room_label = game_group:AddLabel('Ghost Room: Not Found')
 local ghost_speed_label = game_group:AddLabel('Ghost Speed: Not Found')
 local sanity_label = player_group:AddLabel('Sanity:')
@@ -125,6 +127,10 @@ task.delay(15, function()
             emf_label:SetText('EMF 5: Yes')
             library:Notify("Found EMF 5")
             found_emf = true
+        end
+        if emf:IsA("Part") then
+            last_emf_label:SetText('Last EMF: ' .. emf.Name)
+            library:Notify("Last EMF: " .. emf.Name)
         end
     end)
     
