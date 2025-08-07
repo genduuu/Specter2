@@ -6,7 +6,7 @@ local window = library:CreateWindow({
     Position = UDim2.fromOffset(150, 140),
     AutoShow = true,
     TabPadding = 8,
-    MenuFadeTime = 0.2,
+    MenuFadeTime = 0.1,
     Size = UDim2.fromOffset(550, 442)
 })
  
