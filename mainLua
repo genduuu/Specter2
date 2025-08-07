@@ -4,11 +4,12 @@ local save_manager = loadstring(game:HttpGet('https://raw.githubusercontent.com/
  
 local window = library:CreateWindow({
     Title = 'Astolfo Ware | Edited by : @mumtazhafidz(Ig) | Made by @kylosilly',
-    Center = true,
+    Position = UDim2.fromOffset(160, 30),
     AutoShow = true,
     TabPadding = 8,
     MenuFadeTime = 0.2,
     Size = UDim2.fromOffset(550, 442)
+    
 })
  
 local tabs = {
@@ -830,7 +831,7 @@ player_group:AddButton({
             last_pos = local_player.Character.HumanoidRootPart.CFrame
  
             if bone_prompt then
-                local_player.Character.HumanoidRootPart.CFrame = bone.CFrame + Vector3.new(-0.08, 5, 0)
+                local_player.Character.HumanoidRootPart.CFrame = bone.CFrame + Vector3.new(-0.05, 5, 0)
                 camera.CFrame = CFrame.fromEulerAnglesXYZ(30, 88, 180)
                 task.wait(6)
                 fireproximityprompt(bone_prompt)
