@@ -10,7 +10,7 @@ local window = library:CreateWindow({
     AutoShow = true,
     TabPadding = 8,
     MenuFadeTime = 0.2,
-    Size = UDim2.fromOffset(550, 450)
+    Size = UDim2.fromOffset(550, 440)
 })
  
 local tabs = {
@@ -918,8 +918,6 @@ player_group:AddToggle('no_clip', {
     end
 })
  
-player_group:AddDivider()
- 
 player_group:AddToggle('inf_stamina', {
     Text = 'Inf Stamina',
     Default = true,
@@ -952,8 +950,6 @@ player_group:AddSlider('sprint_speed', {
         sprint_speed = Value
     end
 })
- 
-player_group:AddDivider()
  
 ghost_esp_group:AddToggle('always_show', {
     Text = 'Always Show Ghost',
