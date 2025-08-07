@@ -60,6 +60,7 @@ local bone = map:FindFirstChild('Bone')
 local fuse_box = map:FindFirstChild("Fusebox"):FindFirstChild("Fusebox")
 local closets = map.Closets
 local rooms = map.Rooms
+local van_button = workspace.Van.Close
  
 local cursed_object_highlight = false
 local cursed_object_name = false
