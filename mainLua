@@ -77,7 +77,7 @@ local third_person = false
 local jump_enabled = false
 local closet_name = false
 local player_name = false
-local full_bright = true
+local full_bright = false
 local inf_stamina = true
 local anti_touch = true
 local show_ghost = false
@@ -112,7 +112,7 @@ local ghost_room_label = game_group:AddLabel('Ghost Room: Not Found')
 local ghost_speed_label = game_group:AddLabel('Ghost Speed: Not Found')
 local sanity_label = player_group:AddLabel('Sanity:')
  
-task.delay(15, function()
+task.delay(20, function()
     fingerprints.ChildAdded:Connect(function(fingerprint)
         if fingerprint:IsA("Part") and not found_fingerprint then
             fingerprint_label:SetText('Fingerprints: Yes')
@@ -1314,7 +1314,7 @@ menu_group:AddButton('Unload', function()
     inf_stamina = true
     speed_sprint = true
     jump_enabled = false
-    full_bright = true
+    full_bright = false
     show_ghost = false
     highlight_ghost = false
     ghost_name = false
