@@ -10,7 +10,7 @@ local window = library:CreateWindow({
     AutoShow = true,
     TabPadding = 8,
     MenuFadeTime = 0.2,
-    Size = UDim2.fromOffset(550, 400)
+    Size = UDim2.fromOffset(550, 200)
 })
  
 local tabs = {
@@ -106,8 +106,7 @@ local orb_label = game_group:AddLabel('Orbs: Not Found')
 local spirit_box_label = game_group:AddLabel('Spirit Box: Not Found')
  
 game_group:AddDivider()
- 
-local last_emf_label = game_group:AddLabel('Last EMF: None')
+
 local ghost_room_label = game_group:AddLabel('Ghost Room: Not Found')
 local ghost_speed_label = game_group:AddLabel('Ghost Speed: Not Found')
 local sanity_label = player_group:AddLabel('Sanity:')
