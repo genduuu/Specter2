@@ -1,0 +1,109 @@
+local market = game:GetService("MarketplaceService")
+local info = market:GetProductInfo(game.PlaceId)
+local place_id = game.PlaceId
+
+if place_id == 8267733039 then
+    if not game:IsLoaded() then
+    print("Waiting for game to load...")
+    game.Loaded:Wait()
+    print("Loaded")
+end
+
+local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/violin-suzutsuki/LinoriaLib/main/Library.lua'))()
+
+library:Notify("Adding a option soon to use modifiers")
+
+local replicated_storage = game:GetService("ReplicatedStorage")
+local local_player = game:GetService("Players").LocalPlayer
+local Version = "Bone Only"
+
+library:Notify("Ran Auto Farm on Cargo: " .. Version)
+
+if local_player then
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("CreateLobby"):InvokeServer("Auto Farm Made By @kylosilly", 1, 0, "Private")
+    library:Notify("Lobby Created")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Map", "Cargo")
+    library:Notify("Changed Map To Cargo")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Difficulty", "Insanity")
+    library:Notify("Changed Difficulty To Insanity")
+
+    if local_player:GetAttribute("Prestige") < 1 then
+        library:Notify("Starting Game")
+        replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("AttemptStart"):InvokeServer()
+    elseif local_player:GetAttribute("Prestige") > 0 then
+        library:Notify("Applying Modifiers")
+        replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "Depleted", true); replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "Marathon", true); replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "WeakLegs", true)
+        library:Notify("Starting Game")
+        replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("AttemptStart"):InvokeServer()
+    elseif local_player:GetAttribute("Prestige") > 1 then
+        library:Notify("Applying Modifiers")
+        replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "Depleted", true); replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "Marathon", true); replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "WeakLegs", true); replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "BlownFusebox", true); replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "NoHiding", true); replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "NoRecovery", true);
+        library:Notify("Starting Game")
+        replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("AttemptStart"):InvokeServer()
+    elseif local_player:GetAttribute("Prestige") > 3 then -- Skipping Prestige 3 because the modifier wont spawn all evidences needed :sob:
+        library:Notify("Applying Modifiers")
+        replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "Depleted", true); replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "Marathon", true); replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "WeakLegs", true); replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "BlownFusebox", true); replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "NoHiding", true); replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "NoRecovery", true); replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "Countdown", true);
+        library:Notify("Starting Game")
+        replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("AttemptStart"):InvokeServer()
+    elseif local_player:GetAttribute("Prestige") > 4 then -- Skipping Total Insanity because its almost the same as prestige 3 perk
+        library:Notify("Applying Modifiers")
+        replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "Depleted", true); replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "Marathon", true); replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "WeakLegs", true); replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "BlownFusebox", true); replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "NoHiding", true); replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "NoRecovery", true); replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "Countdown", true); replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "Bloodlust", true);
+        library:Notify("Starting Game")
+        replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("AttemptStart"):InvokeServer()
+    elseif local_player:GetAttribute("Prestige") > 9 then
+        library:Notify("Applying Modifiers")
+        replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "Depleted", true); replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "Marathon", true); replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "WeakLegs", true); replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "BlownFusebox", true); replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "NoHiding", true); replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "NoRecovery", true); replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "Countdown", true); replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "Bloodlust", true); replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "Nightmare", true);
+        library:Notify("Starting Game")
+        replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("AttemptStart"):InvokeServer()
+    end
+end
+elseif info.Name == "SPECTER Classic [AI]" then
+    local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/genduuu/Library/refs/heads/main/Lib'))()
+    if not game:IsLoaded() then
+      print("Waiting for game to load...")
+      game.Loaded:Wait()
+      print("Loaded")
+    end
+
+    library:Notify("Farming Bone Only On Cargo")
+  
+    task.wait(5)
+    local local_player = players.LocalPlayer
+    local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+    local van_button = workspace.Van.Close
+    local no_hold = true
+    local bone = map:FindFirstChild('Bone')
+    local camera = workspace.CurrentCamera
+    bone_prompt = bone:FindFirstChildOfClass("ProximityPrompt")
+    rootPart.CFrame = CFrame.new(-146.431677, 154.192383, -136.518372, -0.0174484644, -1.56393707e-08, 0.99984777, -1.70836922e-09, 1, 1.56119384e-08, -0.99984777, -1.43570478e-09, -0.0174484644)
+    camera.CFrame = CFrame.fromEulerAnglesXYZ(180, 89, 180)
+    task.wait(1)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+    rootPart.CFrame = CFrame.new(-254.5, 163.125, -367.998047, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    camera.CFrame = CFrame.fromEulerAnglesXYZ(30, 88, 180)
+    task.wait(4)
+    fireproximityprompt(bone_prompt)
+    rootPart.CFrame = CFrame.new(-217.5, 154.125, -120.998032, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    camera.CFrame = CFrame.fromEulerAnglesXYZ(30, 88, 180)
+    task.wait(4)
+    fireproximityprompt(bone_prompt)
+    rootPart.CFrame = CFrame.new(-271.5, 163.125, -28.4980316, -1.1920929e-07, 0, 1.00000012, 0, 1, 0, -1.00000012, 0, -1.1920929e-07)
+    camera.CFrame = CFrame.fromEulerAnglesXYZ(30, 88, 180)
+    wait(4)
+    fireproximityprompt(bone_prompt)
+    rootPart.CFrame = CFrame.new(-254.999969, 154.625, -274.998047, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    camera.CFrame = CFrame.fromEulerAnglesXYZ(30, 88, 180)
+    wait(4)
+    fireproximityprompt(bone_prompt)
+    rootPart.CFrame = CFrame.new(-209.5, 163.125, -55.4980316, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    camera.CFrame = CFrame.fromEulerAnglesXYZ(30, 88, 180)
+    wait(4)
+    fireproximityprompt(bone_prompt)
+    library:Notify("Bone Collected")
+    rootPart.CFrame = CFrame.new(-146.431677, 154.192383, -136.518372, -0.0174484644, -1.56393707e-08, 0.99984777, -1.70836922e-09, 1, 1.56119384e-08, -0.99984777, -1.43570478e-09, -0.0174484644)
+    camera.CFrame = CFrame.fromEulerAnglesXYZ(180, 89, 180)
+    task.wait(1)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+    
+    
+end
