@@ -68,42 +68,49 @@ elseif info.Name == "SPECTER Classic [AI]" then
     library:Notify("Farming Bone Only On Cargo")
   
     task.wait(5)
-    local local_player = players.LocalPlayer
+    local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/genduuu/Library/refs/heads/main/Lib'))()
     local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
-    local van_button = workspace.Van.Close
-    local no_hold = true
-    local bone = map:FindFirstChild('Bone')
     local camera = workspace.CurrentCamera
+    local van_button = workspace.Van.Close
+    local proximity_prompt_service = game:GetService('ProximityPromptService')
+    local map = workspace.Map
+    local bone = map:FindFirstChild('Bone')
     bone_prompt = bone:FindFirstChildOfClass("ProximityPrompt")
+    
+    proximity_prompt_service.PromptButtonHoldBegan:Connect(function(prompt)
+        if no_hold then
+            prompt.HoldDuration = 0
+        end
+    end)
+    
     rootPart.CFrame = CFrame.new(-146.431677, 154.192383, -136.518372, -0.0174484644, -1.56393707e-08, 0.99984777, -1.70836922e-09, 1, 1.56119384e-08, -0.99984777, -1.43570478e-09, -0.0174484644)
     camera.CFrame = CFrame.fromEulerAnglesXYZ(180, 89, 180)
     task.wait(1)
-    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+    --fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
     rootPart.CFrame = CFrame.new(-254.5, 163.125, -367.998047, 1, 0, 0, 0, 1, 0, 0, 0, 1)
     camera.CFrame = CFrame.fromEulerAnglesXYZ(30, 88, 180)
-    task.wait(4)
+    task.wait(3)
     fireproximityprompt(bone_prompt)
     rootPart.CFrame = CFrame.new(-217.5, 154.125, -120.998032, 1, 0, 0, 0, 1, 0, 0, 0, 1)
     camera.CFrame = CFrame.fromEulerAnglesXYZ(30, 88, 180)
-    task.wait(4)
+    task.wait(3)
     fireproximityprompt(bone_prompt)
     rootPart.CFrame = CFrame.new(-271.5, 163.125, -28.4980316, -1.1920929e-07, 0, 1.00000012, 0, 1, 0, -1.00000012, 0, -1.1920929e-07)
     camera.CFrame = CFrame.fromEulerAnglesXYZ(30, 88, 180)
-    wait(4)
+    task.wait(3)
     fireproximityprompt(bone_prompt)
     rootPart.CFrame = CFrame.new(-254.999969, 154.625, -274.998047, 1, 0, 0, 0, 1, 0, 0, 0, 1)
     camera.CFrame = CFrame.fromEulerAnglesXYZ(30, 88, 180)
-    wait(4)
+    task.wait(3)
     fireproximityprompt(bone_prompt)
     rootPart.CFrame = CFrame.new(-209.5, 163.125, -55.4980316, 1, 0, 0, 0, 1, 0, 0, 0, 1)
     camera.CFrame = CFrame.fromEulerAnglesXYZ(30, 88, 180)
-    wait(4)
+    task.wait(3)
     fireproximityprompt(bone_prompt)
     library:Notify("Bone Collected")
+    library:Notify("Ending Round...")
     rootPart.CFrame = CFrame.new(-146.431677, 154.192383, -136.518372, -0.0174484644, -1.56393707e-08, 0.99984777, -1.70836922e-09, 1, 1.56119384e-08, -0.99984777, -1.43570478e-09, -0.0174484644)
     camera.CFrame = CFrame.fromEulerAnglesXYZ(180, 89, 180)
     task.wait(1)
     fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
-    
-    
 end
