@@ -9,7 +9,7 @@ if place_id == 8267733039 then
     print("Loaded")
 end
 
-local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/violin-suzutsuki/LinoriaLib/main/Library.lua'))()
+local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/genduuu/Library/refs/heads/main/Lib'))()
 
 library:Notify("Adding a option soon to use modifiers")
 
