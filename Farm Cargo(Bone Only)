@@ -11,8 +11,6 @@ end
 
 local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/genduuu/Library/refs/heads/main/Lib'))()
 
-library:Notify("Adding a option soon to use modifiers")
-
 local replicated_storage = game:GetService("ReplicatedStorage")
 local local_player = game:GetService("Players").LocalPlayer
 local Version = "Bone Only"
@@ -21,14 +19,11 @@ library:Notify("Ran Auto Farm on Cargo: " .. Version)
 
 if local_player then
     replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("CreateLobby"):InvokeServer("Auto Farm Made By @kylosilly", 1, 0, "Private")
-    library:Notify("Lobby Created")
     replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Map", "Cargo")
-    library:Notify("Changed Map To Cargo")
     replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Difficulty", "Insanity")
-    library:Notify("Changed Difficulty To Insanity")
+    library:Notify("Lobby Created on Cargo Map")
 
     if local_player:GetAttribute("Prestige") >= 1 then
-        library:Notify("Applying Modifiers for Prestige 10")
 		replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "Depleted", true);
 		replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "Marathon", true);
 		replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "WeakLegs", true);
