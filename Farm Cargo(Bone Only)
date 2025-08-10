@@ -61,7 +61,6 @@ elseif info.Name == "SPECTER Classic [AI]" then
     local proximity_prompt_service = game:GetService('ProximityPromptService')
     local map = workspace.Map
     local bone = map:FindFirstChild('Bone')
-	task.wait(1)
     bone_prompt = bone:FindFirstChildOfClass("ProximityPrompt")
     
     proximity_prompt_service.PromptButtonHoldBegan:Connect(function(prompt)
@@ -74,6 +73,9 @@ elseif info.Name == "SPECTER Classic [AI]" then
     camera.CFrame = CFrame.fromEulerAnglesXYZ(180, 89, 180)
     task.wait(1)
     fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+
+	task.wait(1)
+	bone_prompt = bone:FindFirstChildOfClass("ProximityPrompt")
     rootPart.CFrame = CFrame.new(-254.5, 163.125, -367.998047, 1, 0, 0, 0, 1, 0, 0, 0, 1)
     camera.CFrame = CFrame.fromEulerAnglesXYZ(30, 88, 180)
     task.wait(2)
