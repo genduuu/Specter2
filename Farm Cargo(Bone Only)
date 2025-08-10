@@ -18,7 +18,7 @@ if place_id == 8267733039 then
 	library:Notify("Ran Auto Farm on Cargo: " .. Version)
 
 	if local_player then
-	    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("CreateLobby"):InvokeServer("Auto Farm Made By @Gendu", 4, 0, "Private")
+	    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("CreateLobby"):InvokeServer("Auto Farm Made By @Gendu", 4, 0, "Friends")
 	    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Map", "Cargo")
 	    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Difficulty", "Insanity")
 	    library:Notify("Lobby Created on Cargo Map")
@@ -55,7 +55,7 @@ elseif info.Name == "SPECTER Classic [AI]" then
 
     library:Notify("Farming Bone Only On Cargo")
   
-    task.wait(6)
+    task.wait(5)
     local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/genduuu/Library/refs/heads/main/Lib'))()
     local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
     local camera = workspace.CurrentCamera
