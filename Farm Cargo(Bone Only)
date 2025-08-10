@@ -69,11 +69,13 @@ elseif info.Name == "SPECTER Classic [AI]" then
         end
     end)
 
+	--Open Van
     rootPart.CFrame = CFrame.new(-147.431677, 154.192383, -136.1, -0.0174484644, -1.56393707e-08, 0.99984777, -1.70836922e-09, 1, 1.56119384e-08, -0.99984777, -1.43570478e-09, -0.0174484644)
     camera.CFrame = CFrame.fromEulerAnglesXYZ(180, 89, 180)
     task.wait(1)
     fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
 
+	--Looking for Bone and Collect
 	task.wait(1)
 	bone_prompt = bone:FindFirstChildOfClass("ProximityPrompt")
     rootPart.CFrame = CFrame.new(-254.5, 163.125, -367.998047, 1, 0, 0, 0, 1, 0, 0, 0, 1)
