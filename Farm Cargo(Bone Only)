@@ -38,7 +38,7 @@ if place_id == 8267733039 then
 			replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "TotalInsanity", true);
 			replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "Nightmare", true);
 			library:Notify("Starting Game")
-			task.wait(1)
+			task.wait(2)
 	       	replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("AttemptStart"):InvokeServer()
 	    else
 	        library:Notify("Fail...")
@@ -55,7 +55,7 @@ elseif info.Name == "SPECTER Classic [AI]" then
 
     library:Notify("Farming Bone Only On Cargo")
   
-    task.wait(5)
+    task.wait(7)
     local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/genduuu/Library/refs/heads/main/Lib'))()
     local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
     local camera = workspace.CurrentCamera
