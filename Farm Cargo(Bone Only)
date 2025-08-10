@@ -53,7 +53,7 @@ elseif info.Name == "SPECTER Classic [AI]" then
 
     library:Notify("Farming Bone Only On Cargo")
   
-    task.wait(2)
+    task.wait(4)
     local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/genduuu/Library/refs/heads/main/Lib'))()
     local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
     local camera = workspace.CurrentCamera
