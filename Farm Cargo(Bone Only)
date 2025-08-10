@@ -14,7 +14,7 @@ if place_id == 8267733039 then
 	local replicated_storage = game:GetService("ReplicatedStorage")
 	local local_player = game:GetService("Players").LocalPlayer
 	local Version = "Bone Only"
-	task.wai(3)
+	task.wait(3)
 	library:Notify("Ran Auto Farm on Cargo: " .. Version)
 
 	if local_player then
