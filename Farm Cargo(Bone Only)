@@ -61,6 +61,7 @@ elseif info.Name == "SPECTER Classic [AI]" then
     local proximity_prompt_service = game:GetService('ProximityPromptService')
     local map = workspace.Map
     local bone = map:FindFirstChild('Bone')
+	task.wait(1)
     bone_prompt = bone:FindFirstChildOfClass("ProximityPrompt")
     
     proximity_prompt_service.PromptButtonHoldBegan:Connect(function(prompt)
