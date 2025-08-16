@@ -14,7 +14,7 @@ if place_id == 8267733039 then
 	local replicated_storage = game:GetService("ReplicatedStorage")
 	local local_player = game:GetService("Players").LocalPlayer
 	local Version = "Bone Only"
-	task.wait(2) --edit the numbers(seconds) of time to wait another player to join the lobby again 
+	task.wait(1) --edit the numbers(seconds) of time to wait another player to join the lobby again 
 	library:Notify("Ran Auto Farm on Factory: " .. Version)
 
 	if local_player then
