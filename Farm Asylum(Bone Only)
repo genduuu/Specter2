@@ -47,7 +47,12 @@ if place_id == 8267733039 then
 elseif info.Name == "SPECTER Classic [AI]" then
     local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/genduuu/Library/refs/heads/main/Lib'))()
     
-	game.Loaded:Wait()
+	if not game:IsLoaded() then
+    	print("Waiting for game to load...")
+    	game.Loaded:Wait()
+    	print("Loaded")
+	end
+
 	task.wait(7)
 	library:Notify("Farming Bone Only On Asylum")
   
