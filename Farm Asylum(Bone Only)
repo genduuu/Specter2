@@ -53,7 +53,7 @@ elseif info.Name == "SPECTER Classic [AI]" then
     	print("Loaded")
 	end
 
-	task.wait(9)
+	task.wait(8)
 	library:Notify("Farming Bone Only On Asylum")
   
    	local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/genduuu/Library/refs/heads/main/Lib'))()
