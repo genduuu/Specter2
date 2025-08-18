@@ -140,6 +140,7 @@ task.delay(15, function()
             found_orb = true
         end
     end)
+	library:Notify("Checking FP, Emf 5, and Orbs...")
 end)
 
  
