@@ -94,6 +94,9 @@ local no_hold = true
  
 local touch_distance = 9
 local sprint_speed = 2
+
+lighting.ClockTime = 12
+lighting.GlobalShadows = false
  
 local ghost_room = nil
  
@@ -1266,7 +1269,7 @@ world_group:AddToggle('fb', {
  
     Callback = function(Value)
         full_bright = Value
-        if true then
+        if Value then
             lighting.ClockTime = 12
             lighting.GlobalShadows = false
         else
@@ -1298,12 +1301,12 @@ local watermark_connection = run_service.RenderStepped:Connect(function()
 end);
  
 menu_group:AddButton('Unload', function()
-    anti_touch = true
-    no_hold = true
-    inf_stamina = true
-    speed_sprint = true
+    anti_touch = false
+    no_hold = false
+    inf_stamina = false
+    speed_sprint = false
     jump_enabled = false
-    full_bright = true
+    full_bright = false
     show_ghost = false
     highlight_ghost = false
     ghost_name = false
@@ -1337,8 +1340,8 @@ menu_group:AddButton('Unload', function()
     local_player.Character.UpperTorso.CanCollide = true
     local_player.Character.LowerTorso.CanCollide = true
     local_player.Character.Head.CanCollide = true
-    lighting.ClockTime = 12
-    lighting.GlobalShadows = false
+    lighting.ClockTime = 0
+    lighting.GlobalShadows = true
     watermark_connection:Disconnect()
     motionconnection:Disconnect()
     sanityconnection:Disconnect()
