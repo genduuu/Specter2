@@ -142,7 +142,7 @@ task.delay(10, function()
 	            found_orb = true
 	        end
 	    end)
-	task.wait(2)
+		task.wait(10)
 	end
 end)
 
@@ -878,7 +878,7 @@ player_group:AddToggle('allow_jumping', {
         jump_enabled = Value
         if Value then
             local_player.Character.Humanoid.JumpPower = 30
-            local_player.Character.Humanoid.JumpHeight = 9
+            local_player.Character.Humanoid.JumpHeight = 7
         else
             local_player.Character.Humanoid.JumpPower = 0
             local_player.Character.Humanoid.JumpHeight = 0
