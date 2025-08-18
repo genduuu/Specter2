@@ -112,8 +112,8 @@ local ghost_room_label = game_group:AddLabel('Ghost Room: Not Found')
 local ghost_speed_label = game_group:AddLabel('Ghost Speed: Not Found')
 local sanity_label = player_group:AddLabel('Sanity:')
 
-game.Loaded:Connect(function()
-    fingerprints.ChildAdded:Connect(function(fingerprint)
+task.delay(15, function()
+	fingerprints.ChildAdded:Connect(function(fingerprint)
         if fingerprint:IsA("Part") and not found_fingerprint then
             fingerprint_label:SetText('Fingerprints: Yes')
             library:Notify("Found Fingerprint")
@@ -141,6 +141,7 @@ game.Loaded:Connect(function()
         end
     end)
 end)
+
  
 motionconnection = run_service.RenderStepped:Connect(function()
     for _, motion in pairs(motions:GetDescendants()) do
