@@ -15,7 +15,7 @@ if place_id == 8267733039 then
 	local local_player = game:GetService("Players").LocalPlayer
 	local TheMap = "Asylum"
 	library:Notify("Ran Auto Farm-Bone on : " .. TheMap)
-	task.wait(7) --edit the numbers(seconds) of time to wait another player to join the lobby again 
+	task.wait(6) --edit the numbers(seconds) of time to wait another player to join the lobby again 
 
 	if local_player then
 	    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("CreateLobby"):InvokeServer("Auto Farm Made By @Gendu", 4, 0, "Friends")
@@ -98,6 +98,7 @@ elseif info.Name == "SPECTER Classic [AI]" then
 	fireproximityprompt(bone_prompt)
 	task.wait(.1)
 	fireproximityprompt(bone_prompt)
+	task.wait(2)
 	
 	
 	rootPart.CFrame = CFrame.new(564.310608, 7.09729099, -707.37915, -0.278422475, -4.20614867e-08, 0.960458696, -1.07713021e-07, 1, 1.25687443e-08, -0.960458696, -9.99544838e-08, -0.278422475)
