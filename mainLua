@@ -1263,7 +1263,7 @@ world_group:AddToggle('fb', {
  
     Callback = function(Value)
         full_bright = Value
-        if Value then
+        if true then
             lighting.ClockTime = 12
             lighting.GlobalShadows = false
         else
