@@ -70,7 +70,7 @@ elseif info.Name == "SPECTER Classic [AI]" then
 	    end
 	end)
 	
-	rootPart.CFrame = CFrame.new(564.310608, 7.09729099, -707.37915, -0.278422475, -4.20614867e-08, 0.960458696, -1.07713021e-07, 1, 1.25687443e-08, -0.960458696, -9.99544838e-08, -0.278422475)
+	rootPart.CFrame = CFrame.new(564.310608, 9.09729099, -707.37915, -0.278422475, -4.20614867e-08, 0.960458696, -1.07713021e-07, 1, 1.25687443e-08, -0.960458696, -9.99544838e-08, -0.278422475)
 	camera.CFrame = CFrame.fromEulerAnglesXYZ(180, 89, 180)
 	task.wait(2)
 	fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
@@ -98,7 +98,7 @@ elseif info.Name == "SPECTER Classic [AI]" then
 	fireproximityprompt(bone_prompt)
 	task.wait(.1)
 	fireproximityprompt(bone_prompt)
-	task.wait(2)
+	task.wait(1)
 	
 	
 	rootPart.CFrame = CFrame.new(564.310608, 7.09729099, -707.37915, -0.278422475, -4.20614867e-08, 0.960458696, -1.07713021e-07, 1, 1.25687443e-08, -0.960458696, -9.99544838e-08, -0.278422475)
