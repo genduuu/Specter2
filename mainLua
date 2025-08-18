@@ -142,7 +142,7 @@ task.delay(10, function()
 	            found_orb = true
 	        end
 	    end)
-		task.wait(10)
+		task.wait(30)
 	end
 end)
 
