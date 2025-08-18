@@ -1,6 +1,8 @@
 local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/genduuu/Library/refs/heads/main/Lib'))()
 local theme_manager = loadstring(game:HttpGet('https://raw.githubusercontent.com/genduuu/Library/refs/heads/main/Theme'))()
 
+library:Notify("Welcome...")
+
 local window = library:CreateWindow({
     Title = 'Astolfo Ware | Edited by : @mumtazhafidz(Ig) | Made by @kylosilly',
     Position = UDim2.fromOffset(120, 140),
