@@ -74,10 +74,10 @@ local got_spirit_box = false
 local item_highlight = false
 local speed_sprint = true
 local third_person = false
-local jump_enabled = true
+local jump_enabled = false
 local closet_name = false
 local player_name = false
-local full_bright = false
+local full_bright = true
 local inf_stamina = true
 local anti_touch = true
 local show_ghost = false
@@ -867,14 +867,14 @@ player_group:AddToggle('third_person', {
  
 player_group:AddToggle('allow_jumping', {
     Text = 'Enable Jumping',
-    Default = true,
+    Default = false,
     Tooltip = 'Lets you jump',
  
     Callback = function(Value)
         jump_enabled = Value
         if Value then
             local_player.Character.Humanoid.JumpPower = 30
-            local_player.Character.Humanoid.JumpHeight = 7.2
+            local_player.Character.Humanoid.JumpHeight = 9
         else
             local_player.Character.Humanoid.JumpPower = 0
             local_player.Character.Humanoid.JumpHeight = 0
@@ -1298,8 +1298,8 @@ menu_group:AddButton('Unload', function()
     no_hold = true
     inf_stamina = true
     speed_sprint = true
-    jump_enabled = true
-    full_bright = false
+    jump_enabled = false
+    full_bright = true
     show_ghost = false
     highlight_ghost = false
     ghost_name = false
