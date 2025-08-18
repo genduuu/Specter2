@@ -14,8 +14,8 @@ if place_id == 8267733039 then
 	local replicated_storage = game:GetService("ReplicatedStorage")
 	local local_player = game:GetService("Players").LocalPlayer
 	local TheMap = "Asylum"
-	task.wait(7) --edit the numbers(seconds) of time to wait another player to join the lobby again 
 	library:Notify("Ran Auto Farm-Bone on : " .. TheMap)
+	task.wait(7) --edit the numbers(seconds) of time to wait another player to join the lobby again 
 
 	if local_player then
 	    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("CreateLobby"):InvokeServer("Auto Farm Made By @Gendu", 4, 0, "Friends")
