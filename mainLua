@@ -184,7 +184,7 @@ ghostconnection = run_service.RenderStepped:Connect(function()
                 local Distance = (local_player.Character.HumanoidRootPart.Position - v.PrimaryPart.Position).Magnitude
                 if Distance < touch_distance then
                     local_player.Character.HumanoidRootPart.CFrame = van.PrimaryPart.CFrame + Vector3.new(0, 5, 0)
-                    Library:Notify("Ghost was too close teleported to save place.")
+                    library:Notify("Ghost was too close teleported to save place.")
                 end
             end
         end
@@ -536,7 +536,7 @@ game_group:AddButton({
         if ghost_room then
             local_player.Character.HumanoidRootPart.CFrame = ghost_room
         else
-            Library:Notify("Ghost room not found")
+            library:Notify("Ghost room not found")
         end
     end,
     DoubleClick = false,
@@ -689,7 +689,7 @@ player_group:AddButton({
             end
  
             if not ghost_room then
-                Library:Notify("Ghost room not found")
+                library:Notify("Ghost room not found")
                 return
             end
  
@@ -736,7 +736,7 @@ player_group:AddButton({
         end
  
         if not ghost_room then
-            Library:Notify("Ghost room not found")
+            library:Notify("Ghost room not found")
             return
         end
  
@@ -756,7 +756,7 @@ player_group:AddButton({
  
             for i = 1, 9 do
                 text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Where are you?")
-                task.wait(0.8)
+                task.wait(0.7)
  
                 if got_spirit_box then
                     local_player.Character.HumanoidRootPart.CFrame = last_pos
