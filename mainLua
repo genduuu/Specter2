@@ -90,7 +90,7 @@ local emf_name = false
 local inf_jump = false
 local no_hold = true
  
-local touch_distance = 10
+local touch_distance = 9
 local sprint_speed = 2
  
 local ghost_room = nil
@@ -109,8 +109,8 @@ local last_emf_label = game_group:AddLabel('Last EMF: None')
 local ghost_room_label = game_group:AddLabel('Ghost Room: Not Found')
 local ghost_speed_label = game_group:AddLabel('Ghost Speed: Not Found')
 local sanity_label = player_group:AddLabel('Sanity:')
- 
-task.delay(17, function()
+
+game.Loaded:Connect(function()
     fingerprints.ChildAdded:Connect(function(fingerprint)
         if fingerprint:IsA("Part") and not found_fingerprint then
             fingerprint_label:SetText('Fingerprints: Yes')
@@ -137,7 +137,7 @@ task.delay(17, function()
             library:Notify("Found Orbs")
             found_orb = true
         end
-    end)  
+    end)
 end)
  
 motionconnection = run_service.RenderStepped:Connect(function()
@@ -753,7 +753,7 @@ player_group:AddButton({
  
             for i = 1, 9 do
                 text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Where are you?")
-                task.wait(1)
+                task.wait(0.8)
  
                 if got_spirit_box then
                     local_player.Character.HumanoidRootPart.CFrame = last_pos
