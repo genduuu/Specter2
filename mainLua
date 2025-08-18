@@ -74,7 +74,7 @@ local got_spirit_box = false
 local item_highlight = false
 local speed_sprint = true
 local third_person = false
-local jump_enabled = false
+local jump_enabled = true
 local closet_name = false
 local player_name = false
 local full_bright = false
@@ -89,7 +89,7 @@ local found_emf = false
 local found_orb = false
 local orbs_name = false
 local emf_name = false
-local inf_jump = false
+local inf_jump = true
 local no_hold = true
  
 local touch_distance = 9
@@ -867,7 +867,7 @@ player_group:AddToggle('third_person', {
  
 player_group:AddToggle('allow_jumping', {
     Text = 'Enable Jumping',
-    Default = false,
+    Default = true,
     Tooltip = 'Lets you jump',
  
     Callback = function(Value)
@@ -884,7 +884,7 @@ player_group:AddToggle('allow_jumping', {
  
 player_group:AddToggle('inf_jump', {
     Text = 'Inf Jump',
-    Default = false,
+    Default = true,
     Tooltip = 'Lets you jump forever',
  
     Callback = function(Value)
@@ -1298,7 +1298,7 @@ menu_group:AddButton('Unload', function()
     no_hold = true
     inf_stamina = true
     speed_sprint = true
-    jump_enabled = false
+    jump_enabled = true
     full_bright = false
     show_ghost = false
     highlight_ghost = false
