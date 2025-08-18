@@ -564,9 +564,9 @@ game_group:AddButton({
     Text = 'End Round',
  
     Func = function()
-		local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame + Vector3.new(2, 2, 0)
+		local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame + Vector3.new(2, 1, 0)
 		camera.CFrame = CFrame.fromEulerAnglesXYZ(159, 89.7, 180)
-        task.wait(1)
+        task.wait(.8)
         fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
     end,
     DoubleClick = false,
