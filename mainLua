@@ -5,7 +5,7 @@ library:Notify("Welcome...")
 
 local window = library:CreateWindow({
     Title = 'Astolfo Ware | Edited by : @mumtazhafidz(Ig) | Made by @kylosilly',
-    Position = UDim2.fromOffset(100, 140),
+    Position = UDim2.fromOffset(100, 150),
     AutoShow = true,
     TabPadding = 8,
     MenuFadeTime = 0.1,
@@ -117,36 +117,33 @@ local sanity_label = player_group:AddLabel('Sanity:')
 
 task.delay(10, function()
 	library:Notify("Checking FP, Emf 5, and Orbs...")
-	while true do
-	    fingerprints.ChildAdded:Connect(function(fingerprint)
-	        if fingerprint:IsA("Part") and not found_fingerprint then
-	            fingerprint_label:SetText('Fingerprints: Yes')
-	            library:Notify("Found Fingerprint")
-	            found_fingerprint = true
-	        end
-	    end)
+	fingerprints.ChildAdded:Connect(function(fingerprint)
+	    if fingerprint:IsA("Part") and not found_fingerprint then
+	        fingerprint_label:SetText('Fingerprints: Yes')
+	        library:Notify("Found Fingerprint")
+	        found_fingerprint = true
+	    end
+	end)
 	 
-	    emfs.ChildAdded:Connect(function(emf)
-	        if emf:IsA("Part") and emf.Name == 'EMF5' and not found_emf then
-	            emf_label:SetText('EMF 5: Yes')
-	            library:Notify("Found EMF 5")
-	            found_emf = true
-	        end
-	        if emf:IsA("Part") then
-	            last_emf_label:SetText('Last EMF: ' .. emf.Name)
-	            library:Notify("Last EMF: " .. emf.Name)
-	        end
-	    end)
+	emfs.ChildAdded:Connect(function(emf)
+	    if emf:IsA("Part") and emf.Name == 'EMF5' and not found_emf then
+	        emf_label:SetText('EMF 5: Yes')
+	        library:Notify("Found EMF 5")
+	        found_emf = true
+	    end
+	    if emf:IsA("Part") then
+	        last_emf_label:SetText('Last EMF: ' .. emf.Name)
+	        library:Notify("Last EMF: " .. emf.Name)
+	    end
+	end)
 	    
-	    orbs.ChildAdded:Connect(function(orb)
-	        if orb:IsA("Part") and not found_orb then
-	            orb_label:SetText('Orbs: Yes')
-	            library:Notify("Found Orbs")
-	            found_orb = true
-	        end
-	    end)
-		task.wait(30)
-	end
+	orbs.ChildAdded:Connect(function(orb)
+        if orb:IsA("Part") and not found_orb then
+            orb_label:SetText('Orbs: Yes')
+            library:Notify("Found Orbs")
+            found_orb = true
+        end
+    end)
 end)
 
  
