@@ -760,7 +760,7 @@ player_group:AddButton({
  
             for i = 1, 9 do
                 text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Where are you?")
-                task.wait(1)
+                task.wait(.9)
  
                 if got_spirit_box then
                     local_player.Character.HumanoidRootPart.CFrame = last_pos
