@@ -364,6 +364,10 @@ if started_round then
                 camera.CFrame = CFrame.new(camera.CFrame.Position, camera.CFrame.Position + Vector3.new(1, -2.5, 0))
                 task.wait(2)
                 mouse1click()
+				mouse1click()
+				mouse1click()
+				mouse1click()
+				mouse1click()
                 task.wait(1)
                 local_player.Character.HumanoidRootPart.CFrame = van.PrimaryPart.CFrame + Vector3.new(0, 5, 0)
             end
@@ -402,7 +406,7 @@ if started_round then
             local_player.Character.HumanoidRootPart.CFrame = ghost_room
             camera.CFrame = CFrame.new(camera.CFrame.Position, camera.CFrame.Position + Vector3.new(-1, -2.5, 0))
             task.wait(2)
-            mouse1click()
+            replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("InventoryService"):WaitForChild("RF"):WaitForChild("Drop"):InvokeServer(3)
             task.wait(1)
 
             local book = workspace.Equipment.Book
