@@ -596,6 +596,7 @@ if started_round then
     
     for _, equipment in pairs(van_equipment:GetChildren()) do
         if equipment:IsA("Model") and equipment.Name == "Book" then
+			local book = workspace.Equipment.Book
             local_player.Character.HumanoidRootPart.CFrame = equipment.PrimaryPart.CFrame + Vector3.new(0, 5, 0)
             task.wait(.4)
             replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("InventoryService"):WaitForChild("RF"):WaitForChild("PickupItem"):InvokeServer(equipment)
@@ -603,10 +604,7 @@ if started_round then
             camera.CFrame = CFrame.new(camera.CFrame.Position, camera.CFrame.Position + Vector3.new(-1, -2.5, 0))
             task.wait(2)
             Place(3)
-            task.wait(1)
-
-            local book = workspace.Equipment.Book
-            task.wait(0.7)
+            task.wait(1.5)
             local_player.Character.HumanoidRootPart.CFrame = CFrame.new(-203.064163, 186.09726, -197.520523, 0.931905746, -4.27305444e-08, 0.362700462, 1.19228565e-08, 1, 8.71781722e-08, -0.362700462, -7.69174164e-08, 0.931905746)
             camera.CFrame = CFrame.fromEulerAnglesXYZ(110, 34, 120)
 
