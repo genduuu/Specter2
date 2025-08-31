@@ -290,9 +290,12 @@ if started_round then
         end
 
         if not got_room then
-            local_player:kick("Ghost room not found! please report this to @kylosilly on discord!")
-            wait(1)
-            teleport_service:Teleport(8267733039)
+			local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+            text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost room not found!")
+            task.wait(0.4)
+            text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Skipping the Round")
+            task.wait(1.5)
+            fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
         end
     end
 
@@ -406,7 +409,7 @@ if started_round then
             teleport_service:Teleport(8267733039)
         end
 
-        task.wait(3)
+        task.wait(4.5)
 
 
     for i = 1, 3 do
