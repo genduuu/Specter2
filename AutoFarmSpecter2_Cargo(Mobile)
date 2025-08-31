@@ -1003,4 +1003,4 @@ if started_round then
     end
 end
 end
---source:https://raw.githubusercontent.com/kylosilly/astolfoware/refs/heads/main/specter%20auto%20farm%20loader%20slow.lua
+--Original Idea:https://raw.githubusercontent.com/kylosilly/astolfoware/refs/heads/main/specter%20auto%20farm%20loader%20slow.lua
