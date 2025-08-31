@@ -328,7 +328,7 @@ if started_round then
 
         if thermometer then
             local_player.Character.HumanoidRootPart.CFrame = ghost_room
-            task.wait(2.5)
+            task.wait(2.6)
             local temperature = tonumber(thermometer.Text:match("[-%d]+"))
 
             
