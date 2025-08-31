@@ -602,10 +602,8 @@ if started_round then
 	local_player.Character.HumanoidRootPart.CFrame = CFrame.new(-203.064163, 188.09726, -197.520523, 0.931905746, -4.27305444e-08, 0.362700462, 1.19228565e-08, 1, 8.71781722e-08, -0.362700462, -7.69174164e-08, 0.931905746)
     camera.CFrame = CFrame.fromEulerAnglesXYZ(110, 34, 120)
 	task.wait(.2)
-	text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("/e dance")
 	library:Notify("Waiting For Writing (1 Min 50 Seconds)")
     task.wait(110)
-    no_writing = true
 
     for _, sink in next, sinks:GetChildren() do
         if sink.Transparency < 1 then
@@ -875,10 +873,8 @@ if started_round then
         library:Notify("Waiting 2 Seconds To Assume Writing...")
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Assume Writing...")
         task.wait(2)
-
         library:Notify("Guess Writing :)")
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Guess Writing :)")
-        no_writing = true
         local_player.Character.HumanoidRootPart.CFrame = van.PrimaryPart.CFrame + Vector3.new(0, 3, 0)
 
         if got_emf_five and got_fingerprint and got_orb then
