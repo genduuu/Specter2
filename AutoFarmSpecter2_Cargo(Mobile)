@@ -865,20 +865,12 @@ if started_round then
     else
         library:Notify("Waiting 2 Seconds To Assume Writing...")
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Assume Writing...")
-        local book = workspace.Equipment.Book
         task.wait(2)
 
-        if book:FindFirstChild("LeftPage") and book.LeftPage:FindFirstChildOfClass("Decal") and book:FindFirstChild("RightPage") and book.RightPage:FindFirstChildOfClass("Decal") then
-            library:Notify("Found Writing")
-            text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Found Writing")
-            got_writing = true
-            local_player.Character.HumanoidRootPart.CFrame = van.PrimaryPart.CFrame + Vector3.new(0, 3, 0)
-        else
-            library:Notify("Guess Writing :)")
-            text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Guess Writing :)")
-            no_writing = true
-            local_player.Character.HumanoidRootPart.CFrame = van.PrimaryPart.CFrame + Vector3.new(0, 3, 0)
-        end
+        library:Notify("Guess Writing :)")
+        text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Guess Writing :)")
+        no_writing = true
+        local_player.Character.HumanoidRootPart.CFrame = van.PrimaryPart.CFrame + Vector3.new(0, 3, 0)
 
         if got_emf_five and got_fingerprint and got_orb then
             library:Notify("Ghost is: O Tokata")
