@@ -593,7 +593,8 @@ if started_round then
     end
 
     task.wait(1)
-
+	local_player.Character.HumanoidRootPart.CFrame = CFrame.new(-203.064163, 186.09726, -197.520523, 0.931905746, -4.27305444e-08, 0.362700462, 1.19228565e-08, 1, 8.71781722e-08, -0.362700462, -7.69174164e-08, 0.931905746)
+    camera.CFrame = CFrame.fromEulerAnglesXYZ(110, 34, 120)
 	library:Notify("Waiting For Writing (1 Min 30 Seconds)")
     task.wait(90)
     no_writing = true
