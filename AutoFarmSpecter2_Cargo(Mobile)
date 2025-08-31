@@ -8,6 +8,7 @@ if place_id == 8267733039 then
     game.Loaded:Wait()
     print("Loaded")
 end
+task.wait(5)--adjust this to wait another player to rejoin lobby
 
 local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/genduuu/Library/refs/heads/main/Lib'))()
 
