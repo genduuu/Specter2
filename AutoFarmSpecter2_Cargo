@@ -217,6 +217,7 @@ if started_round then
         if equipment:IsA("Model") and (equipment.Name == "EMF Reader" or equipment.Name == "Thermometer" or equipment.Name == "Spirit Box") then
             local_player.Character.HumanoidRootPart.CFrame = equipment.PrimaryPart.CFrame + Vector3.new(0, 5, 0)
             replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("InventoryService"):WaitForChild("RF"):WaitForChild("PickupItem"):InvokeServer(equipment)
+            task.wait(.3)
             collected_equipment = true
         end
     end
@@ -250,7 +251,7 @@ if started_round then
                 if hitbox then
                     local_player.Character.HumanoidRootPart.CFrame = hitbox.CFrame + Vector3.new(0, 3, 0)
                     camera.CFrame = hitbox.CFrame
-                    task.wait(.6)
+                    task.wait(.7)
 
                     if emf_tool.Color == Color3.fromRGB(131, 156, 49) then
                         ghost_room = hitbox.CFrame
@@ -293,7 +294,7 @@ if started_round then
 
         if not thermometer then
             local_player:Kick("Thermometer not found! please report this to @kylosilly on discord!")
-            wait(2.5)
+            wait(2.8)
             teleport_service:Teleport(8267733039)
         end
 
@@ -364,6 +365,7 @@ if started_round then
         for _, equipment in pairs(van_equipment:GetChildren()) do
             if equipment:IsA("Model") and equipment.Name == "Motion Sensor" then
                 local_player.Character.HumanoidRootPart.CFrame = equipment.PrimaryPart.CFrame + Vector3.new(0, 5, 0)
+                task.wait(.4)
                 replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("InventoryService"):WaitForChild("RF"):WaitForChild("PickupItem"):InvokeServer(equipment)
                 local_player.Character.HumanoidRootPart.CFrame = CFrame.new(-132.464432, 153.09726, -145.501785, 0.999999762, 9.55231982e-09, 0.000702987541, -9.56368318e-09, 1, 1.61608948e-08, -0.000702987541, -1.61676148e-08, 0.999999762)
                 camera.CFrame = CFrame.new(camera.CFrame.Position, camera.CFrame.Position + Vector3.new(1, -2.5, 0))
@@ -574,6 +576,7 @@ if started_round then
     for _, equipment in pairs(van_equipment:GetChildren()) do
         if equipment:IsA("Model") and equipment.Name == "Book" then
             local_player.Character.HumanoidRootPart.CFrame = equipment.PrimaryPart.CFrame + Vector3.new(0, 5, 0)
+            task.wait(.4)
             replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("InventoryService"):WaitForChild("RF"):WaitForChild("PickupItem"):InvokeServer(equipment)
             local_player.Character.HumanoidRootPart.CFrame = ghost_room
             camera.CFrame = CFrame.new(camera.CFrame.Position, camera.CFrame.Position + Vector3.new(-1, -2.5, 0))
