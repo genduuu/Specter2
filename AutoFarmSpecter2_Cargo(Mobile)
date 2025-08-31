@@ -55,6 +55,7 @@ end
 task.wait(2)
 
 local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/genduuu/Library/refs/heads/main/Lib'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/genduuu/Universal/refs/heads/main/AutoReconnectOnError'))()
 
 library:Notify("Loaded Auto Farm Made by @kylosilly")
 library:Notify("Remastered by @mumtazhafidz")
@@ -316,7 +317,7 @@ if started_round then
         end    
 
         virtual_input_manager:SendKeyEvent(true, Enum.KeyCode.One, false, nil)
-        task.wait(.5)
+        task.wait(.8)
         local thermometer = local_player.Character and local_player.Character:FindFirstChild("EquipmentModel") and local_player.Character.EquipmentModel:FindFirstChild("Temp") and local_player.Character.EquipmentModel.Temp:FindFirstChild("SurfaceGui") and local_player.Character.EquipmentModel.Temp.SurfaceGui:FindFirstChild("TextLabel")
         replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("InventoryService"):WaitForChild("RF"):WaitForChild("Toggle"):InvokeServer("Thermometer")
 
@@ -599,7 +600,7 @@ if started_round then
     end
 
     task.wait(1)
-	local_player.Character.HumanoidRootPart.CFrame = CFrame.new(-203.064163, 186.09726, -197.520523, 0.931905746, -4.27305444e-08, 0.362700462, 1.19228565e-08, 1, 8.71781722e-08, -0.362700462, -7.69174164e-08, 0.931905746)
+	local_player.Character.HumanoidRootPart.CFrame = CFrame.new(-203.064163, 188.09726, -197.520523, 0.931905746, -4.27305444e-08, 0.362700462, 1.19228565e-08, 1, 8.71781722e-08, -0.362700462, -7.69174164e-08, 0.931905746)
     camera.CFrame = CFrame.fromEulerAnglesXYZ(110, 34, 120)
 	task.wait(.2)
 	text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("/e dance")
