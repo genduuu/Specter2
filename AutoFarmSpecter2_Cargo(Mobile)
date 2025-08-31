@@ -273,7 +273,7 @@ if started_round then
                 if hitbox then
                     local_player.Character.HumanoidRootPart.CFrame = hitbox.CFrame + Vector3.new(0, 3, 0)
                     camera.CFrame = hitbox.CFrame
-                    task.wait(.7)
+                    task.wait(.8)
 
                     if emf_tool.Color == Color3.fromRGB(131, 156, 49) then
                         ghost_room = hitbox.CFrame
@@ -310,7 +310,7 @@ if started_round then
         end    
 
         virtual_input_manager:SendKeyEvent(true, Enum.KeyCode.One, false, nil)
-        task.wait(1)
+        task.wait(.5)
         local thermometer = local_player.Character and local_player.Character:FindFirstChild("EquipmentModel") and local_player.Character.EquipmentModel:FindFirstChild("Temp") and local_player.Character.EquipmentModel.Temp:FindFirstChild("SurfaceGui") and local_player.Character.EquipmentModel.Temp.SurfaceGui:FindFirstChild("TextLabel")
         replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("InventoryService"):WaitForChild("RF"):WaitForChild("Toggle"):InvokeServer("Thermometer")
 
@@ -322,7 +322,7 @@ if started_round then
 
         if thermometer then
             local_player.Character.HumanoidRootPart.CFrame = ghost_room
-            task.wait(3)
+            task.wait(2.5)
             local temperature = tonumber(thermometer.Text:match("[-%d]+"))
 
             
