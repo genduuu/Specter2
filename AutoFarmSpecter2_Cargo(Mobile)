@@ -239,7 +239,7 @@ if started_round then
         if equipment:IsA("Model") and (equipment.Name == "EMF Reader" or equipment.Name == "Thermometer" or equipment.Name == "Spirit Box") then
             local_player.Character.HumanoidRootPart.CFrame = equipment.PrimaryPart.CFrame + Vector3.new(0, 5, 0)
             replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("InventoryService"):WaitForChild("RF"):WaitForChild("PickupItem"):InvokeServer(equipment)
-            task.wait(.3)
+            task.wait(.1)
             collected_equipment = true
         end
     end
