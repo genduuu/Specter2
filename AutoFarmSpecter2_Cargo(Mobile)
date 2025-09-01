@@ -52,10 +52,7 @@ elseif info.Name == "SPECTER Classic [AI]" then
     print("Loaded")
 end
 
-task.wait(2)
-
 local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/genduuu/Library/refs/heads/main/Lib'))()
-
 library:Notify("Loaded Auto Farm Made by @kylosilly")
 library:Notify("Remastered by @mumtazhafidz")
 
