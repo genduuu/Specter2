@@ -9,7 +9,7 @@ if place_id == 8267733039 then
     print("Loaded")
 end
 
-task.wait(5)--adjust this to wait another player to rejoin lobby
+task.wait(6)--adjust this to wait another player to rejoin lobby
 
 local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/genduuu/Library/refs/heads/main/Lib'))()
 local replicated_storage = game:GetService("ReplicatedStorage")
@@ -454,7 +454,7 @@ if started_round then
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
             task.wait(0.4)
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Banshee")
-            task.wait(5)
+            
             fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
         elseif got_freezing and got_spirit_box and got_orb then
             library:Notify("Ghost is: Mare")
@@ -463,7 +463,7 @@ if started_round then
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
             task.wait(0.4)
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Mare")
-            task.wait(5)
+            task.wait(6)
             fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
         elseif got_emf_five and got_spirit_box and got_orb then
             library:Notify("Ghost is: Duppy")
@@ -472,7 +472,7 @@ if started_round then
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
             task.wait(0.4)
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Duppy")
-            task.wait(5)
+            task.wait(6)
             fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
         elseif got_motion and got_spirit_box and got_freezing then
             library:Notify("Ghost is: Wendigo")
@@ -481,7 +481,7 @@ if started_round then
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
             task.wait(0.4)
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Wendigo")
-            task.wait(5)
+            task.wait(6)
             fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
         elseif got_spirit_box and got_fingerprint and got_orb then
             library:Notify("Ghost is: Poltergeist")
@@ -490,7 +490,7 @@ if started_round then
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
             task.wait(0.4)
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Poltergeist")
-            task.wait(5)
+            task.wait(6)
             fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
         elseif got_freezing and got_orb and got_emf_five then
             library:Notify("Ghost is: Phantom")
@@ -499,7 +499,7 @@ if started_round then
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
             task.wait(0.4)
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Phantom")
-            task.wait(5)
+            task.wait(6)
             fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
         elseif got_emf_five and got_motion and got_orb then
             library:Notify("Ghost is: Jinn")
@@ -508,7 +508,7 @@ if started_round then
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
             task.wait(0.4)
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Jinn")
-            task.wait(5)
+            task.wait(6)
             fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
         elseif got_emf_five and got_freezing and got_motion then
             library:Notify("Ghost is: Upyr")
@@ -517,7 +517,7 @@ if started_round then
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
             task.wait(0.4)
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Upyr")
-            task.wait(5)
+            task.wait(6)
             fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
         elseif got_emf_five and got_fingerprint and got_spirit_box then
             library:Notify("Ghost is: Aswang")
@@ -526,7 +526,7 @@ if started_round then
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
             task.wait(0.4)
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Aswang")
-            task.wait(5)
+            task.wait(6)
             fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
         elseif got_orb and got_fingerprint and got_freezing then
             library:Notify("Ghost is: Thaye")
@@ -535,7 +535,7 @@ if started_round then
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
             task.wait(0.4)
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Thaye")
-            task.wait(5)
+            task.wait(6)
             fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
         elseif got_emf_five and got_fingerprint and got_orb then
             library:Notify("Ghost is: O Tokata")
@@ -544,7 +544,7 @@ if started_round then
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
             task.wait(0.4)
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: O Tokata")
-            task.wait(5)
+            task.wait(6)
             fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
         elseif got_motion and got_emf_five and got_spirit_box then
             library:Notify("Ghost is: Myling")
@@ -553,7 +553,7 @@ if started_round then
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
             task.wait(0.4)
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Myling")
-            task.wait(5)
+            task.wait(6)
             fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
         elseif got_motion and got_freezing and got_orb then
             library:Notify("Ghost is: Afarit")
@@ -562,7 +562,7 @@ if started_round then
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
             task.wait(0.4)
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Afarit")
-            task.wait(5)
+            task.wait(6)
             fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
         elseif got_motion and got_emf_five and got_fingerprint then
             library:Notify("Ghost is: Preta")
@@ -571,7 +571,7 @@ if started_round then
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
             task.wait(0.4)
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Preta")
-            task.wait(5)
+            task.wait(6)
             fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
         elseif got_motion and got_freezing and got_fingerprint then
             library:Notify("Ghost is: Yokai")
@@ -580,7 +580,7 @@ if started_round then
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
             task.wait(0.4)
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Yokai")
-            task.wait(5)
+            task.wait(6)
             fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
         elseif got_orb and got_spirit_box and got_motion then
             library:Notify("Ghost is: Haint")
@@ -589,7 +589,7 @@ if started_round then
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
             task.wait(0.4)
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Haint")
-            task.wait(5)
+            task.wait(6)
             fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
         end
     else
@@ -624,7 +624,7 @@ if started_round then
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
         task.wait(0.4)
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Banshee")
-        task.wait(5)
+        task.wait(6)
         fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
     elseif got_freezing and got_spirit_box and got_orb then
         library:Notify("Ghost is: Mare")
@@ -633,7 +633,7 @@ if started_round then
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
         task.wait(0.4)
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Mare")
-        task.wait(5)
+        task.wait(6)
         fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
     elseif got_emf_five and got_spirit_box and got_orb then
         library:Notify("Ghost is: Duppy")
@@ -642,7 +642,7 @@ if started_round then
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
         task.wait(0.4)
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Duppy")
-        task.wait(5)
+        task.wait(6)
         fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
     elseif got_motion and got_spirit_box and got_freezing then
         library:Notify("Ghost is: Wendigo")
@@ -651,7 +651,7 @@ if started_round then
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
         task.wait(0.4)
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Wendigo")
-        task.wait(5)
+        task.wait(6)
         fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
     elseif got_spirit_box and got_fingerprint and got_orb then
         library:Notify("Ghost is: Poltergeist")
@@ -660,7 +660,7 @@ if started_round then
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
         task.wait(0.4)
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Poltergeist")
-        task.wait(5)
+        task.wait(6)
         fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
     elseif got_freezing and got_orb and got_emf_five then
         library:Notify("Ghost is: Phantom")
@@ -669,7 +669,7 @@ if started_round then
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
         task.wait(0.4)
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Phantom")
-        task.wait(5)
+        task.wait(6)
         fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
     elseif got_emf_five and got_motion and got_orb then
         library:Notify("Ghost is: Jinn")
@@ -678,7 +678,7 @@ if started_round then
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
         task.wait(0.4)
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Jinn")
-        task.wait(5)
+        task.wait(6)
         fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
     elseif got_emf_five and got_freezing and got_motion then
         library:Notify("Ghost is: Upyr")
@@ -687,7 +687,7 @@ if started_round then
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
         task.wait(0.4)
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Upyr")
-        task.wait(5)
+        task.wait(6)
         fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
     elseif got_emf_five and got_fingerprint and got_spirit_box then
         library:Notify("Ghost is: Aswang")
@@ -696,7 +696,7 @@ if started_round then
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
         task.wait(0.4)
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Aswang")
-        task.wait(5)
+        task.wait(6)
         fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
     elseif got_orb and got_fingerprint and got_freezing then
         library:Notify("Ghost is: Thaye")
@@ -705,7 +705,7 @@ if started_round then
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
         task.wait(0.4)
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Thaye")
-        task.wait(5)
+        task.wait(6)
         fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
     elseif got_emf_five and got_fingerprint and got_orb then
         library:Notify("Ghost is: O Tokata")
@@ -714,7 +714,7 @@ if started_round then
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
         task.wait(0.4)
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: O Tokata")
-        task.wait(5)
+        task.wait(6)
         fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
     elseif got_motion and got_emf_five and got_spirit_box then
         library:Notify("Ghost is: Myling")
@@ -723,7 +723,7 @@ if started_round then
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
         task.wait(0.4)
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Myling")
-        task.wait(5)
+        task.wait(6)
         fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
     elseif got_motion and got_freezing and got_orb then
         library:Notify("Ghost is: Afarit")
@@ -732,7 +732,7 @@ if started_round then
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
         task.wait(0.4)
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Afarit")
-        task.wait(5)
+        task.wait(6)
         fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
     elseif got_motion and got_emf_five and got_fingerprint then
         library:Notify("Ghost is: Preta")
@@ -741,7 +741,7 @@ if started_round then
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
         task.wait(0.4)
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Preta")
-        task.wait(5)
+        task.wait(6)
         fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
     elseif got_motion and got_freezing and got_fingerprint then
         library:Notify("Ghost is: Yokai")
@@ -750,7 +750,7 @@ if started_round then
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
         task.wait(0.4)
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Yokai")
-        task.wait(5)
+        task.wait(6)
         fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
     elseif got_writing and got_spirit_box and got_freezing then
         library:Notify("Ghost is: Demon")
@@ -759,7 +759,7 @@ if started_round then
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
         task.wait(0.4)
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Demon")
-        task.wait(5)
+        task.wait(6)
         fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
     elseif got_writing and got_fingerprint and got_spirit_box then
         library:Notify("Ghost is: Spirit")
@@ -768,7 +768,7 @@ if started_round then
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
         task.wait(0.4)
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Spirit")
-        task.wait(5)
+        task.wait(6)
         fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
     elseif got_emf_five and got_writing and got_fingerprint then
         library:Notify("Ghost is: Revenant")
@@ -777,7 +777,7 @@ if started_round then
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
         task.wait(0.4)
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Revenant")
-        task.wait(5)
+        task.wait(6)
         fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
     elseif got_emf_five and got_writing and got_orb then
         library:Notify("Ghost is: Shade")
@@ -786,7 +786,7 @@ if started_round then
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
         task.wait(0.4)
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Shade")
-        task.wait(5)
+        task.wait(6)
         fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
     elseif got_freezing and got_writing and got_orb then
         library:Notify("Ghost is: Yurei")
@@ -795,7 +795,7 @@ if started_round then
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
         task.wait(0.4)
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Yurei")
-        task.wait(5)
+        task.wait(6)
         fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
     elseif got_motion and got_writing and got_spirit_box then
         library:Notify("Ghost is: Oni")
@@ -804,7 +804,7 @@ if started_round then
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
         task.wait(0.4)
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Oni")
-        task.wait(5)
+        task.wait(6)
         fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
     elseif got_orb and got_writing and got_spirit_box then
         library:Notify("Ghost is: Egui")
@@ -813,7 +813,7 @@ if started_round then
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
         task.wait(0.4)
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Egui")
-        task.wait(5)
+        task.wait(6)
         fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
     elseif got_orb and got_fingerprint and got_writing then
         library:Notify("Ghost is: Wisp")
@@ -822,7 +822,7 @@ if started_round then
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
         task.wait(0.4)
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Wisp")
-        task.wait(5)
+        task.wait(6)
         fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
     elseif got_motion and got_fingerprint and got_writing then
         library:Notify("Ghost is: Douen")
@@ -831,7 +831,7 @@ if started_round then
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
         task.wait(0.4)
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Douen")
-        task.wait(5)
+        task.wait(6)
         fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
     elseif got_motion and got_writing and got_emf_five then
         library:Notify("Ghost is: Wraith")
@@ -840,7 +840,7 @@ if started_round then
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
         task.wait(0.4)
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Wraith")
-        task.wait(5)
+        task.wait(6)
         fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
     elseif got_spirit_box and got_writing and got_emf_five then
         library:Notify("Ghost is: Mimic")
@@ -849,7 +849,7 @@ if started_round then
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
         task.wait(0.4)
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Mimic")
-        task.wait(5)
+        task.wait(6)
         fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
     elseif got_orb and got_spirit_box and got_motion then
         library:Notify("Ghost is: Haint")
@@ -858,7 +858,7 @@ if started_round then
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
         task.wait(0.4)
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Haint")
-        task.wait(5)
+        task.wait(6)
         fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
     elseif got_motion and got_writing and got_freezing then
         library:Notify("Ghost is: Bhuta")
@@ -867,7 +867,7 @@ if started_round then
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
         task.wait(0.4)
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Bhuta")
-        task.wait(5)
+        task.wait(6)
         fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
     else
         library:Notify("Waiting 2 Seconds To Assume Writing...")
@@ -884,7 +884,7 @@ if started_round then
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
             task.wait(0.4)
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: O Tokata")
-            task.wait(5)
+            task.wait(6)
             fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
         elseif got_spirit_box and got_emf_five then
             library:Notify("Ghost is: Mimic")
@@ -893,7 +893,7 @@ if started_round then
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
             task.wait(0.4)
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Mimic")
-            task.wait(5)
+            task.wait(6)
             fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
         elseif got_orb and got_fingerprint then
             library:Notify("Ghost is: Wisp")
@@ -902,7 +902,7 @@ if started_round then
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
             task.wait(0.4)
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Wisp")
-            task.wait(5)
+            task.wait(6)
             fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
         elseif got_motion and got_fingerprint then
             library:Notify("Ghost is: Douen")
@@ -911,7 +911,7 @@ if started_round then
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
             task.wait(0.4)
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Douen")
-            task.wait(5)
+            task.wait(6)
             fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
         elseif got_motion and got_freezing then
             library:Notify("Ghost is: Bhuta")
@@ -920,7 +920,7 @@ if started_round then
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
             task.wait(0.4)
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Bhuta")
-            task.wait(5)
+            task.wait(6)
             fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
         elseif got_orb and got_spirit_box then
             library:Notify("Ghost is: Egui")
@@ -929,7 +929,7 @@ if started_round then
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
             task.wait(0.4)
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Egui")
-            task.wait(5)
+            task.wait(6)
             fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
         elseif got_motion and got_spirit_box then
             library:Notify("Ghost is: Oni")
@@ -938,7 +938,7 @@ if started_round then
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
             task.wait(0.4)
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Oni")
-            task.wait(5)
+            task.wait(6)
             fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
         elseif got_spirit_box and got_freezing then
             library:Notify("Ghost is: Demon")
@@ -947,7 +947,7 @@ if started_round then
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
             task.wait(0.4)
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Demon")
-            task.wait(5)
+            task.wait(6)
             fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
         elseif got_emf_five and got_fingerprint then
             library:Notify("Ghost is: Revenant")
@@ -956,7 +956,7 @@ if started_round then
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
             task.wait(0.4)
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Revenant")
-            task.wait(5)
+            task.wait(6)
             fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
         elseif got_emf_five and got_orb then
             library:Notify("Ghost is: Shade")
@@ -965,7 +965,7 @@ if started_round then
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
             task.wait(0.4)
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Shade")
-            task.wait(5)
+            task.wait(6)
             fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
         elseif got_freezing and got_orb then
             library:Notify("Ghost is: Yurei")
@@ -974,7 +974,7 @@ if started_round then
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
             task.wait(0.4)
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Yurei")
-            task.wait(5)
+            task.wait(6)
             fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
         elseif got_fingerprint and got_spirit_box then
             library:Notify("Ghost is: Spirit")
@@ -983,7 +983,7 @@ if started_round then
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
             task.wait(0.4)
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Spirit")
-            task.wait(5)
+            task.wait(6)
             fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
         elseif got_emf_five and got_motion then
             library:Notify("Ghost is: Wraith")
@@ -992,7 +992,7 @@ if started_round then
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
             task.wait(0.4)
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Wraith")
-            task.wait(5)
+            task.wait(6)
             fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
         else
             library:Notify("Couldnt Find Ghost, Going Back To Menu")
