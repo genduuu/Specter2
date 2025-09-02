@@ -870,11 +870,9 @@ if started_round then
         task.wait(5)
         fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
     else
-        library:Notify("Waiting 2 Seconds To Assume Writing...")
-        text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Assume Writing...")
-        task.wait(2)
         library:Notify("Guess Writing :)")
         text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Guess Writing :)")
+		task.wait(2)
         local_player.Character.HumanoidRootPart.CFrame = van.PrimaryPart.CFrame + Vector3.new(0, 3, 0)
 
         if got_emf_five and got_fingerprint and got_orb then
