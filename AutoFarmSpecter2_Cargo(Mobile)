@@ -454,7 +454,7 @@ if started_round then
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
             task.wait(0.4)
             text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Banshee")
-            
+            task.wait(6)
             fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
         elseif got_freezing and got_spirit_box and got_orb then
             library:Notify("Ghost is: Mare")
