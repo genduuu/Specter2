@@ -251,7 +251,7 @@ if started_round then
         teleport_service:Teleport(8267733039)
     end
 
-	task.wait(1)
+	task.wait(2)
 
     if collected_equipment then
         virtual_input_manager:SendKeyEvent(true, Enum.KeyCode.Two, false, nil)
