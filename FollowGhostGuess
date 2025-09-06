@@ -1,0 +1,11 @@
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local RF = ReplicatedStorage.Packages.Knit.Services.PlayerService.RF.UpdateGuess
+local SendGuess = ReplicatedStorage.Packages.Knit.Services.PlayerService.RE.SendGuess
+
+SendGuess.OnClientEvent:Connect(function(playerName, ghostName)
+    local localPlayer = game.Players.LocalPlayer
+    if playerName ~= localPlayer.Name then
+        RF:InvokeServer(ghostName)
+        print("Mirrored guess:", ghostName)
+    end
+end)
