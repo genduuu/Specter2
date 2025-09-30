@@ -1,0 +1,1031 @@
+local market = game:GetService("MarketplaceService")
+local info = market:GetProductInfo(game.PlaceId)
+local place_id = game.PlaceId
+
+if place_id == 8267733039 then
+    if not game:IsLoaded() then
+        print("Waiting for game to load...")
+        game.Loaded:Wait()
+        print("Loaded")
+    end
+        
+    local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/genduuu/Library/refs/heads/main/Lib'))()
+    local replicated_storage = game:GetService("ReplicatedStorage")
+    local local_player = game:GetService("Players").LocalPlayer
+    
+    library:Notify("Auto Farm Script Remastered by @mumtazhafidz")
+    
+    if local_player then
+        replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("CreateLobby"):InvokeServer("Auto Farm Made By @mumtazhafidz", 4, 0, "Friends")
+        replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Map", "Cargo")
+        replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Difficulty", "Insanity")
+        library:Notify("Lobby Created on Cargo-Insanity")
+        
+        if local_player:GetAttribute("Prestige") > 0 then
+            replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "Depleted", true);
+            replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "Marathon", true);
+            replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "WeakLegs", true);
+            replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "BlownFusebox", true);
+            replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "NoHiding", true);
+            replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "NoRecovery", true);
+            replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "DeathSentence", true);
+            replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "NoSavior", true);
+            replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "Countdown", true);
+            replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "Bloodlust", true);
+            replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("ChangeValue"):InvokeServer("Modifier", "Nightmare", true);
+            task.wait(1)
+            library:Notify("Modifiers Applied")
+            library:Notify("Starting Game")
+            replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("LobbyService"):WaitForChild("RF"):WaitForChild("AttemptStart"):InvokeServer()
+        else
+        library:Notify("Fail...")
+    end
+end
+
+--// In-Game Run
+
+elseif info.Name == "SPECTER Classic [AI]" then
+if not game:IsLoaded() then
+    print("Waiting for game to load...")
+    game.Loaded:Wait()
+    print("Loaded")
+end
+local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/genduuu/Library/refs/heads/main/Lib'))()
+library:Notify("Loaded Auto Farm Made by @kylosilly")
+library:Notify("Remastered by @mumtazhafidz")
+task.wait(.3)
+library:Notify("Wait 15 Seconds to Load Assets")
+task.wait(15)
+    
+local virtual_input_manager = game:GetService("VirtualInputManager")
+local player = game.Players.LocalPlayer
+local char = player.Character or player.CharacterAdded:Wait()
+local hrp = char:WaitForChild("HumanoidRootPart")
+local camera = workspace.CurrentCamera
+hrp.CFrame = CFrame.new(-146.8, 154.8, -136.518372, -0.0174484644, -1.56393707e-08, 0.99984777, -1.70836922e-09, 1, 1.56119384e-08, -0.99984777, -1.43570478e-09, -0.0174484644)
+camera.CFrame = CFrame.fromEulerAnglesXYZ(180, 89, 180)
+task.wait(0.6)
+virtual_input_manager:SendKeyEvent(true, Enum.KeyCode.E, false, nil)
+task.wait(1.5)
+	
+--// Services
+   
+local replicated_storage = game:GetService("ReplicatedStorage")
+local text_chat_service = game:GetService("TextChatService")
+local local_player = game:GetService("Players").LocalPlayer
+local teleport_service = game:GetService("TeleportService")
+local run_service = game:GetService("RunService")
+local workspace = game:GetService("Workspace")
+local lighting = game:GetService("Lighting")
+
+    
+--// Placing Item For Mobile
+    
+local RS,PLR,CAM=game.ReplicatedStorage,game.Players.LocalPlayer,workspace.CurrentCamera
+local UIS=game:GetService("UserInputService")
+local RF=RS.Packages.Knit.Services.InventoryService.RF.Place  
+local function Place(slot)
+local m=PLR:GetMouse()
+local ray=CAM:ScreenPointToRay(m.X,m.Y)
+local p=RaycastParams.new()
+p.FilterDescendantsInstances={PLR.Character,workspace.Camera}
+p.FilterType=Enum.RaycastFilterType.Blacklist
+local r=workspace:Raycast(ray.Origin,ray.Direction*500,p)
+    if r and r.Instance:IsA("MeshPart") then
+        local cf=CFrame.lookAt(r.Position,r.Position+r.Normal)
+        return RF:InvokeServer(slot,cf,r.Instance)
+    else
+    warn("Invalid hit")
+    end
+end
+
+--// Paths
+
+local fingerprints_folder = workspace.Dynamic.Evidence.Fingerprints
+local motions_folder = workspace.Dynamic.Evidence.MotionGrids
+local orbs_folder = workspace.Dynamic.Evidence.Orbs
+local emf_folder = workspace.Dynamic.Evidence.EMF
+
+local sinks = workspace.Map.EventObjects.Sinks
+
+local van_equipment = workspace.Van.Equipment
+local van_button = workspace.Van.Close
+local van = workspace.Van
+
+local map = workspace:FindFirstChild("Map")
+local rooms = map.Rooms
+
+--// Variables
+
+local got_fingerprint = false
+local got_spirit_box = false
+local got_emf_five = false
+local got_freezing = false
+local no_freezing = false
+local got_writing = false
+local no_writing = false
+local got_motion = false
+local got_orb = false
+
+local collected_equipment = false
+local collected_bone = false
+local started_round = false
+
+local check_fingerprint = true
+local check_info = true
+local check_emf = true
+local check_orb = true
+local got_room = false
+
+local ghost_room = nil
+local room_name = nil
+
+
+--// Main Script (Dont Modify Anything Under Here Unless You Know What Youre Doing)
+
+if not hookmetamethod then
+    local_player:Kick("Your Executor Dosent Support HookMetaMethod")
+end
+
+lighting.ClockTime = 11
+lighting.GlobalShadows = false
+
+text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Auto Farm Full AFK by @Gendu")
+task.wait(0.4)
+
+emf_folder.ChildAdded:Connect(function(emf)
+if emf.Name == "EMF5" and check_emf then
+    library:Notify("Found EMF5")
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Found EMF5")
+    got_emf_five = true
+    check_emf = false
+end
+end)
+
+fingerprints_folder.ChildAdded:Connect(function(fingerprint)
+if fingerprint:IsA("Part") and check_fingerprint then
+    library:Notify("Found Fingerprint")
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Found Fingerprint")
+    got_fingerprint = true
+    check_fingerprint = false
+end
+end)
+
+orbs_folder.ChildAdded:Connect(function(orb)
+if orb:IsA("Part") and check_orb then
+    library:Notify("Found Orbs")
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Found Orbs")
+    got_orb = true
+    check_orb = false
+end
+end)
+
+motion_connection = run_service.RenderStepped:Connect(function()
+for _, motion in pairs(motions_folder:GetDescendants()) do
+    if motion:IsA("Part") then
+        if motion.Color == Color3.fromRGB(252, 52, 52) then
+            library:Notify("Found Motion")
+            text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Found Motion")
+            got_motion = true
+            motion_connection:Disconnect()
+            break
+        elseif motion.BrickColor == BrickColor.new("Toothpaste") then
+            library:Notify("No Motion")
+            print("No Motion")
+            no_motion = true
+            motion_connection:Disconnect()
+            break
+        end
+    end
+end
+end)
+
+virtual_input_manager:SendKeyEvent(true, Enum.KeyCode.One, false, nil)
+replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("InventoryService"):WaitForChild("RF"):WaitForChild("Drop"):InvokeServer(1)
+
+print"Kylosilly's Auto Farm Script"
+print"Remastered by @mumtazhafidz on IG"
+
+if true then
+    local bone = map:FindFirstChild("Bone")
+    
+    if bone then
+        local bone_prompt = bone:FindFirstChildOfClass("ProximityPrompt")
+        local last_pos = local_player.Character.HumanoidRootPart.CFrame
+        local_player.Character.HumanoidRootPart.CFrame = bone.CFrame + Vector3.new(0, 5, 0)
+        task.wait(.5)
+        fireproximityprompt(bone_prompt)
+        task.wait(.5)
+        local_player.Character.HumanoidRootPart.CFrame = last_pos
+        library:Notify("Collected Bone")
+        collected_bone = true
+    else
+    library:Notify("No Bone Found, Skipping")
+    collected_bone = true
+end
+end
+
+task.wait(.5)
+
+--CaptureGhost(Beta)
+text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Capturing The Ghost with Camera...")
+local ghostHRP = workspace:WaitForChild("ServerNPCs"):WaitForChild("GLOBAL"):WaitForChild("HumanoidRootPart")
+local equipment5 = van_equipment:FindFirstChild("Camera")
+local_player.Character.HumanoidRootPart.CFrame = CFrame.new(-142.167282, 155.097229, -125.577415, -0.00793365389, -2.91685565e-10, -0.999968529, -3.83461298e-08, 1, 1.25397271e-11, 0.999968529, 3.83450214e-08, -0.00793365389)
+camera.CFrame = CFrame.new(0, 5, 0) * CFrame.fromEulerAnglesXYZ(0, math.rad(-90), 0)
+task.wait(.5)
+replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("InventoryService"):WaitForChild("RF"):WaitForChild("PickupItem"):InvokeServer(equipment5)
+local direction = (hrp.Position - ghostHRP.Position + Vector3.new(0, 6, 0)).Unit
+local targetPosition = ghostHRP.Position + direction * 2.5
+hrp.CFrame = CFrame.new(targetPosition, ghostHRP.Position)
+local lookAt = CFrame.new(camera.CFrame.Position, ghostHRP.Position)
+camera.CFrame = lookAt * CFrame.Angles(math.rad(15), 0, 0)
+local_player.Character.HumanoidRootPart.CFrame = van.PrimaryPart.CFrame + Vector3.new(0, 6, 0)
+task.wait(.5)
+for i = 1, 4 do
+    if hrp and ghostHRP then
+        local direction = (hrp.Position - ghostHRP.Position + Vector3.new(0, 7, 0)).Unit
+        local targetPosition = ghostHRP.Position + direction * 2.5
+        hrp.CFrame = CFrame.new(targetPosition, ghostHRP.Position)
+        local lookAt = CFrame.new(camera.CFrame.Position, ghostHRP.Position)
+        camera.CFrame = lookAt * CFrame.Angles(math.rad(15), 0, 0)
+
+        task.wait(.01)
+
+        virtual_input_manager:SendKeyEvent(true, Enum.KeyCode.Q, false, nil)
+        virtual_input_manager:SendKeyEvent(false, Enum.KeyCode.Q, false, nil)
+	task.wait(.6)
+    end
+    local_player.Character.HumanoidRootPart.CFrame = van.PrimaryPart.CFrame + Vector3.new(0, 5, 0)
+    task.wait(1)
+end
+replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("InventoryService"):WaitForChild("RF"):WaitForChild("Drop"):InvokeServer(1)
+
+--[[if collected_bone then
+    local last_pos = local_player.Character.HumanoidRootPart.CFrame
+    local van_prompt = van_button:FindFirstChildOfClass("ProximityPrompt")
+    
+    if van_prompt then
+        local_player.Character.HumanoidRootPart.CFrame = van_prompt.Parent.CFrame + Vector3.new(3, 0, 0)
+        camera.CFrame = van_prompt.Parent.CFrame
+        task.wait(1)
+        fireproximityprompt(van_prompt)
+        task.wait(1)
+        local_player.Character.HumanoidRootPart.CFrame = last_pos
+        started_round = true
+    end
+end]]
+
+if true then
+    local equipment1 = van_equipment:FindFirstChild("Thermometer")
+    local equipment2 = van_equipment:FindFirstChild("EMF Reader")
+    local equipment3 = van_equipment:FindFirstChild("Spirit Box")
+    local_player.Character.HumanoidRootPart.CFrame = CFrame.new(-143.6, 154.097244, -122.19236, -0.999888659, -2.00365378e-08, 0.0149220722, -2.00332391e-08, 1, 3.70569908e-10, -0.0149220722, 7.15912191e-11, -0.999888659)
+    camera.CFrame = CFrame.new(0, 5, 0) * CFrame.fromEulerAnglesXYZ(math.rad(40), math.rad(180), 0)
+    task.wait(.5)
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("InventoryService"):WaitForChild("RF"):WaitForChild("PickupItem"):InvokeServer(equipment1)
+    local_player.Character.HumanoidRootPart.CFrame = CFrame.new(-138.9431, 154.097244, -122.19236, -0.999888659, -2.00365378e-08, 0.0149220722, -2.00332391e-08, 1, 3.70569908e-10, -0.0149220722, 7.15912191e-11, -0.999888659)
+    task.wait(.5)
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("InventoryService"):WaitForChild("RF"):WaitForChild("PickupItem"):InvokeServer(equipment2)
+    local_player.Character.HumanoidRootPart.CFrame = CFrame.new(-141.3, 154.097244, -122.19236, -0.999888659, -2.00365378e-08, 0.0149220722, -2.00332391e-08, 1, 3.70569908e-10, -0.0149220722, 7.15912191e-11, -0.999888659)
+    task.wait(.5)
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("InventoryService"):WaitForChild("RF"):WaitForChild("PickupItem"):InvokeServer(equipment3)
+    collected_equipment = true
+
+    task.wait(.2)
+            
+    if collected_equipment then
+        virtual_input_manager:SendKeyEvent(true, Enum.KeyCode.Two, false, nil)
+        task.wait(.6)
+        local emf_tool = local_player.Character:FindFirstChild("EquipmentModel") and local_player.Character.EquipmentModel:FindFirstChild("2")
+        local emf = local_player.Character:FindFirstChild("EquipmentModel") and local_player.Character.EquipmentModel:FindFirstChild("1")
+        replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("InventoryService"):WaitForChild("RF"):WaitForChild("Toggle"):InvokeServer("EMF Reader")
+        task.wait(.5)
+        for _, room in next, rooms:GetChildren() do
+            if room:IsA("Folder") then
+                local hitbox = room:FindFirstChild("Hitbox")
+                
+                if hitbox then
+                    local_player.Character.HumanoidRootPart.CFrame = hitbox.CFrame + Vector3.new(0, 3, 0)
+                    camera.CFrame = hitbox.CFrame
+                    task.wait(.47)
+                    
+                    if emf_tool.Color == Color3.fromRGB(131, 156, 49) then
+                        ghost_room = hitbox.CFrame
+                        room_name = room.Name
+                        got_room = true
+			text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost room: " .. room.Name)
+                        break
+                    end
+                end
+            end
+        end
+        
+        task.wait(.5)
+        
+        if not got_room then
+            local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+            text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost room not found!")
+            task.wait(0.4)
+            text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Skipping the Round")
+            task.wait(1.5)
+            fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+        end
+    end
+    
+    if got_room then
+        if hookmetamethod then
+            library:Notify("Hooking LocalPlayer Room Value To Ghost Room...")
+            local old
+            old = hookmetamethod(game, "__namecall", function(self, ...)
+            local args = {...}
+            local method = getnamecallmethod()
+            
+            if method == "InvokeServer" and self.Name == "UpdateRoom" and not checkcaller() then
+                args[1] = room_name
+                return old(self, unpack(args))
+            end
+            return old(self, ...)
+        end)
+    end
+    virtual_input_manager:SendKeyEvent(true, Enum.KeyCode.One, false, nil)
+    task.wait(.6)
+    local thermometer = local_player.Character and local_player.Character:FindFirstChild("EquipmentModel") and local_player.Character.EquipmentModel:FindFirstChild("Temp") and local_player.Character.EquipmentModel.Temp:FindFirstChild("SurfaceGui") and local_player.Character.EquipmentModel.Temp.SurfaceGui:FindFirstChild("TextLabel")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("InventoryService"):WaitForChild("RF"):WaitForChild("Toggle"):InvokeServer("Thermometer")
+    task.wait(.2)
+        
+    if thermometer then
+        local_player.Character.HumanoidRootPart.CFrame = ghost_room
+        task.wait(2.8)
+        local temperature = tonumber(thermometer.Text:match("[-%d]+"))
+        
+        
+        if temperature and temperature < 0 then
+            library:Notify("Got Freezing Temperature")
+            text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Got Freeze")
+            got_freezing = true
+        else
+        library:Notify("No Freezing Temperature")
+        print("No Freezing Temperature")
+        no_freezing = true
+    end
+end
+local_player.Character.HumanoidRootPart.CFrame = van.PrimaryPart.CFrame + Vector3.new(0, 5, 0)
+end
+
+if (got_freezing or no_freezing) then
+    virtual_input_manager:SendKeyEvent(true, Enum.KeyCode.Three, false, nil)
+    task.wait(.6)
+    local spirit_box = local_player.Character and local_player.Character:FindFirstChild("EquipmentModel") and local_player.Character.EquipmentModel:FindFirstChild("Main")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("InventoryService"):WaitForChild("RF"):WaitForChild("Toggle"):InvokeServer("Spirit Box")
+    task.wait(.2)
+        
+    if spirit_box then
+        local responses
+        responses = spirit_box.DescendantAdded:Connect(function(reply)
+        if reply:IsA("BillboardGui") then
+            replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("InventoryService"):WaitForChild("RF"):WaitForChild("Drop"):InvokeServer(3)
+            responses:Disconnect()
+            got_spirit_box = true
+            library:Notify("Got Spirit Box")
+            text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Got Spirit Box")
+            task.wait(.5)
+        end
+    end)
+    for i = 1, 9 do
+        text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Where are you?")
+        task.wait(0.8)
+        if got_spirit_box then
+            break
+        end
+    end
+    if not got_spirit_box then
+        replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("InventoryService"):WaitForChild("RF"):WaitForChild("Drop"):InvokeServer(3)
+        library:Notify("No Spirit Box")
+        print("No Spirit Box")
+    end
+end
+end
+
+if (got_spirit_box or not got_spirit_box) then
+    local last_pos = {}
+    local equipment4 = van_equipment:FindFirstChild("Motion Sensor")
+    local xRot = CFrame.Angles(math.rad(-55), 0, 0)
+    local yRot = CFrame.Angles(0, math.rad(-90), 0)
+    local_player.Character.HumanoidRootPart.CFrame = CFrame.new(-142.167282, 155.097229, -125.577415, -0.00793365389, -2.91685565e-10, -0.999968529, -3.83461298e-08, 1, 1.25397271e-11, 0.999968529, 3.83450214e-08, -0.00793365389)
+    camera.CFrame = yRot * xRot
+    task.wait(.5)
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("InventoryService"):WaitForChild("RF"):WaitForChild("PickupItem"):InvokeServer(equipment4)
+    local_player.Character.HumanoidRootPart.CFrame = CFrame.new(-132.464432, 153.09726, -145.501785, 0.999999762, 9.55231982e-09, 0.000702987541, -9.56368318e-09, 1, 1.61608948e-08, -0.000702987541, -1.61676148e-08, 0.999999762)
+    xRot = CFrame.Angles(math.rad(-85), 0, 0)
+    camera.CFrame = yRot * xRot
+    task.wait(1)
+    Place(3)
+    task.wait(2)
+    local_player.Character.HumanoidRootPart.CFrame = van.PrimaryPart.CFrame + Vector3.new(0, 5, 0)
+    
+    task.wait(5)
+    
+    for i = 1, 3 do
+        for _, motion_grid in pairs(motions_folder:GetDescendants()) do
+            if motion_grid:IsA("Part") then
+                last_pos[motion_grid] = motion_grid.CFrame
+                local ghost = workspace.NPCs:FindFirstChildOfClass("Model")
+                motion_grid.CFrame = ghost.HumanoidRootPart.CFrame + Vector3.new(1, 0, 0)
+            end
+        end
+        task.wait(.6)
+    end
+    
+    task.wait(1)
+    
+    for v, pos in pairs(last_pos) do
+        v.CFrame = pos
+    end
+end
+
+
+task.wait(2)
+
+local_player.Character.HumanoidRootPart.CFrame = van.PrimaryPart.CFrame + Vector3.new(0, 5, 0)
+library:Notify("Check if There's enough Evidences (5 Seconds)...")
+text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Check if There's enough Evidences (5 Seconds)...")
+task.wait(5)
+
+--Finding Dirty Sinks
+for _, Water in next, sinks:GetChildren() do
+    local sound_count = 0
+    for _, obj in next, Water:GetChildren() do
+        if obj:IsA("Sound") then
+            sound_count += 1
+        end
+    end
+
+    -- condition: more than 1 Sound inside this Water part
+    if sound_count > 1 then
+        text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Found Dirty Sinks")
+        local water_prompt = Water:FindFirstChildOfClass("ProximityPrompt")
+        if water_prompt then
+            local_player.Character.HumanoidRootPart.CFrame = water_prompt.Parent.CFrame
+            task.wait(0.5)
+            fireproximityprompt(water_prompt)
+            task.wait(0.5)
+            local_player.Character.HumanoidRootPart.CFrame = van.PrimaryPart.CFrame + Vector3.new(0, 3, 0)
+        end
+    end
+end
+
+local eviList = {got_freezing,got_spirit_box,got_emf_five,got_fingerprint,got_orb,got_motion}
+local eviCount = 0
+for i, v in ipairs(eviList) do
+    if v == true then
+        eviCount = eviCount + 1
+    end
+end
+
+if eviCount == 3 then
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Found All Evidences")
+    task.wait(0.4)
+    if got_emf_five and got_fingerprint and got_freezing then
+        library:Notify("Ghost is: Banshee")
+        replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Banshee")
+        local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+        text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+        task.wait(0.4)
+        text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Banshee")
+        task.wait(5)
+        fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+    elseif got_freezing and got_spirit_box and got_orb then
+        library:Notify("Ghost is: Mare")
+        replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Mare")
+        local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+        text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+        task.wait(0.4)
+        text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Mare")
+        task.wait(5)
+        fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+    elseif got_emf_five and got_spirit_box and got_orb then
+        library:Notify("Ghost is: Duppy")
+        replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Duppy")
+        local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+        text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+        task.wait(0.4)
+        text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Duppy")
+        task.wait(5)
+        fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+    elseif got_motion and got_spirit_box and got_freezing then
+        library:Notify("Ghost is: Wendigo")
+        replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Wendigo")
+        local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+        text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+        task.wait(0.4)
+        text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Wendigo")
+        task.wait(5)
+        fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+    elseif got_spirit_box and got_fingerprint and got_orb then
+        library:Notify("Ghost is: Poltergeist")
+        replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Poltergeist")
+        local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+        text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+        task.wait(0.4)
+        text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Poltergeist")
+        task.wait(5)
+        fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+    elseif got_freezing and got_orb and got_emf_five then
+        library:Notify("Ghost is: Phantom")
+        replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Phantom")
+        local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+        text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+        task.wait(0.4)
+        text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Phantom")
+        task.wait(5)
+        fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+    elseif got_emf_five and got_motion and got_orb then
+        library:Notify("Ghost is: Jinn")
+        replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Jinn")
+        local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+        text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+        task.wait(0.4)
+        text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Jinn")
+        task.wait(5)
+        fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+    elseif got_emf_five and got_freezing and got_motion then
+        library:Notify("Ghost is: Upyr")
+        replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Upyr")
+        local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+        text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+        task.wait(0.4)
+        text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Upyr")
+        task.wait(5)
+        fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+    elseif got_emf_five and got_fingerprint and got_spirit_box then
+        library:Notify("Ghost is: Aswang")
+        replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Aswang")
+        local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+        text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+        task.wait(0.4)
+        text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Aswang")
+        task.wait(5)
+        fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+    elseif got_orb and got_fingerprint and got_freezing then
+        library:Notify("Ghost is: Thaye")
+        replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Thaye")
+        local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+        text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+        task.wait(0.4)
+        text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Thaye")
+        task.wait(5)
+        fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+    elseif got_emf_five and got_fingerprint and got_orb then
+        library:Notify("Ghost is: O Tokata")
+        replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("O Tokata")
+        local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+        text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+        task.wait(0.4)
+        text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: O Tokata")
+        task.wait(5)
+        fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+    elseif got_motion and got_emf_five and got_spirit_box then
+        library:Notify("Ghost is: Myling")
+        replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Myling")
+        local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+        text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+        task.wait(0.4)
+        text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Myling")
+        task.wait(5)
+        fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+    elseif got_motion and got_freezing and got_orb then
+        library:Notify("Ghost is: Afarit")
+        replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Afarit")
+        local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+        text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+        task.wait(0.4)
+        text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Afarit")
+        task.wait(5)
+        fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+    elseif got_motion and got_emf_five and got_fingerprint then
+        library:Notify("Ghost is: Preta")
+        replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Preta")
+        local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+        text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+        task.wait(0.4)
+        text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Preta")
+        task.wait(5)
+        fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+    elseif got_motion and got_freezing and got_fingerprint then
+        library:Notify("Ghost is: Yokai")
+        replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Yokai")
+        local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+        text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+        task.wait(0.4)
+        text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Yokai")
+        task.wait(5)
+        fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+    elseif got_orb and got_spirit_box and got_motion then
+        library:Notify("Ghost is: Haint")
+        replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Haint")
+        local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+        text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+        task.wait(0.4)
+        text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Haint")
+        task.wait(5)
+        fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+    end
+else
+text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Evidences Not Enough")
+task.wait(0.4)
+text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Find More Evidences (1 Minute)...")
+task.wait(1)
+local_player.Character.HumanoidRootPart.CFrame = CFrame.new(-203.064163, 188.09726, -197.520523, 0.931905746, -4.27305444e-08, 0.362700462, 1.19228565e-08, 1, 8.71781722e-08, -0.362700462, -7.69174164e-08, 0.931905746)
+camera.CFrame = CFrame.fromEulerAnglesXYZ(110, 34, 120)
+task.wait(.2)
+library:Notify("Waiting For More Evidences (1 Minute)")
+task.wait(60)
+if got_emf_five and got_fingerprint and got_freezing then
+    library:Notify("Ghost is: Banshee")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Banshee")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Banshee")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_freezing and got_spirit_box and got_orb then
+    library:Notify("Ghost is: Mare")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Mare")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Mare")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_emf_five and got_spirit_box and got_orb then
+    library:Notify("Ghost is: Duppy")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Duppy")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Duppy")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_motion and got_spirit_box and got_freezing then
+    library:Notify("Ghost is: Wendigo")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Wendigo")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Wendigo")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_spirit_box and got_fingerprint and got_orb then
+    library:Notify("Ghost is: Poltergeist")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Poltergeist")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Poltergeist")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_freezing and got_orb and got_emf_five then
+    library:Notify("Ghost is: Phantom")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Phantom")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Phantom")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_emf_five and got_motion and got_orb then
+    library:Notify("Ghost is: Jinn")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Jinn")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Jinn")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_emf_five and got_freezing and got_motion then
+    library:Notify("Ghost is: Upyr")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Upyr")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Upyr")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_emf_five and got_fingerprint and got_spirit_box then
+    library:Notify("Ghost is: Aswang")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Aswang")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Aswang")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_orb and got_fingerprint and got_freezing then
+    library:Notify("Ghost is: Thaye")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Thaye")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Thaye")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_emf_five and got_fingerprint and got_orb then
+    library:Notify("Ghost is: O Tokata")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("O Tokata")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: O Tokata")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_motion and got_emf_five and got_spirit_box then
+    library:Notify("Ghost is: Myling")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Myling")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Myling")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_motion and got_freezing and got_orb then
+    library:Notify("Ghost is: Afarit")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Afarit")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Afarit")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_motion and got_emf_five and got_fingerprint then
+    library:Notify("Ghost is: Preta")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Preta")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Preta")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_motion and got_freezing and got_fingerprint then
+    library:Notify("Ghost is: Yokai")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Yokai")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Yokai")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_writing and got_spirit_box and got_freezing then
+    library:Notify("Ghost is: Demon")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Demon")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Demon")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_writing and got_fingerprint and got_spirit_box then
+    library:Notify("Ghost is: Spirit")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Spirit")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Spirit")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_emf_five and got_writing and got_fingerprint then
+    library:Notify("Ghost is: Revenant")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Revenant")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Revenant")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_emf_five and got_writing and got_orb then
+    library:Notify("Ghost is: Shade")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Shade")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Shade")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_freezing and got_writing and got_orb then
+    library:Notify("Ghost is: Yurei")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Yurei")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Yurei")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_motion and got_writing and got_spirit_box then
+    library:Notify("Ghost is: Oni")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Oni")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Oni")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_orb and got_writing and got_spirit_box then
+    library:Notify("Ghost is: Egui")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Egui")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Egui")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_orb and got_fingerprint and got_writing then
+    library:Notify("Ghost is: Wisp")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Wisp")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Wisp")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_motion and got_fingerprint and got_writing then
+    library:Notify("Ghost is: Douen")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Douen")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Douen")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_motion and got_writing and got_emf_five then
+    library:Notify("Ghost is: Wraith")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Wraith")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Wraith")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_spirit_box and got_writing and got_emf_five then
+    library:Notify("Ghost is: Mimic")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Mimic")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Mimic")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_orb and got_spirit_box and got_motion then
+    library:Notify("Ghost is: Haint")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Haint")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Haint")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_motion and got_writing and got_freezing then
+    library:Notify("Ghost is: Bhuta")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Bhuta")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Bhuta")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+else
+library:Notify("Guess Writing :)")
+text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Guess Writing :)")
+task.wait(2)
+local_player.Character.HumanoidRootPart.CFrame = van.PrimaryPart.CFrame + Vector3.new(0, 3, 0)
+
+if got_emf_five and got_fingerprint and got_orb then
+    library:Notify("Ghost is: O Tokata")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("O Tokata")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: O Tokata")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_spirit_box and got_emf_five then
+    library:Notify("Ghost is: Mimic")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Mimic")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Mimic")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_orb and got_fingerprint then
+    library:Notify("Ghost is: Wisp")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Wisp")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Wisp")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_motion and got_fingerprint then
+    library:Notify("Ghost is: Douen")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Douen")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Douen")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_motion and got_freezing then
+    library:Notify("Ghost is: Bhuta")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Bhuta")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Bhuta")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_orb and got_spirit_box then
+    library:Notify("Ghost is: Egui")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Egui")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Egui")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_motion and got_spirit_box then
+    library:Notify("Ghost is: Oni")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Oni")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Oni")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_spirit_box and got_freezing then
+    library:Notify("Ghost is: Demon")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Demon")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Demon")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_emf_five and got_fingerprint then
+    library:Notify("Ghost is: Revenant")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Revenant")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Revenant")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_emf_five and got_orb then
+    library:Notify("Ghost is: Shade")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Shade")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Shade")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_freezing and got_orb then
+    library:Notify("Ghost is: Yurei")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Yurei")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Yurei")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_fingerprint and got_spirit_box then
+    library:Notify("Ghost is: Spirit")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Spirit")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Spirit")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+elseif got_emf_five and got_motion then
+    library:Notify("Ghost is: Wraith")
+    replicated_storage:WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PlayerService"):WaitForChild("RF"):WaitForChild("UpdateGuess"):InvokeServer("Wraith")
+    local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Final Vote (5 Seconds)")
+    task.wait(0.4)
+    text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Ghost is: Wraith")
+    task.wait(5)
+    fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+else
+library:Notify("Couldnt Find Ghost, Going Back To Menu")
+text_chat_service:FindFirstChild("TextChannels").RBXGeneral:SendAsync("Fail...Sorry Guys :)")
+local_player.Character.HumanoidRootPart.CFrame = van_button.CFrame
+task.wait(0.25)
+fireproximityprompt(van_button:FindFirstChildOfClass("ProximityPrompt"))
+end
+end
+end
+end
+end
+
+--Original Idea:https://raw.githubusercontent.com/kylosilly/astolfoware/refs/heads/main/specter%20auto%20farm%20loader%20slow.lua
