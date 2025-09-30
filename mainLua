@@ -89,7 +89,7 @@ local found_emf = false
 local found_orb = false
 local orbs_name = false
 local emf_name = false
-local inf_jump = true
+local inf_jump = false
 local no_hold = true
  
 local touch_distance = 9
