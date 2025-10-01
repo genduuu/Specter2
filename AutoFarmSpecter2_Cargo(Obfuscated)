@@ -1,3 +1,0 @@
-local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/genduuu/Library/refs/heads/main/Lib'))()
-   
-    library:Notify("Updated, Check @Gendu on Rscript")
