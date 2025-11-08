@@ -44,7 +44,7 @@ end
 
 --// In-Game Run
 
-elseif info.Name == "SPECTER Classic [AI]" then
+else
 if not game:IsLoaded() then
     print("Waiting for game to load...")
     game.Loaded:Wait()
