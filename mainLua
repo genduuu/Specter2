@@ -1,4 +1,4 @@
-local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/genduuu/Library/refs/heads/main/Lib'))()
+local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/genduuu/Library/refs/heads/main/LibraryNew'))()
 local theme_manager = loadstring(game:HttpGet('https://raw.githubusercontent.com/genduuu/Library/refs/heads/main/Theme'))()
 
 library:Notify("Welcome...")
@@ -115,7 +115,7 @@ local ghost_room_label = game_group:AddLabel('Ghost Room: Not Found')
 local ghost_speed_label = game_group:AddLabel('Ghost Speed: Not Found')
 local sanity_label = player_group:AddLabel('Sanity:')
 
-task.delay(17, function()
+task.delay(7, function()
 	library:Notify("Checking FP, Emf 5, and Orbs...")
 	fingerprints.ChildAdded:Connect(function(fingerprint)
 	    if fingerprint:IsA("Part") and not found_fingerprint then
